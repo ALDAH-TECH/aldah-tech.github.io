@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio de DAOUDA ALI Abdoul Latifou — Ingénieur en Télécommunications, spécialiste Maintenance et QoS des Réseaux Fibrés." />
+  <meta name="author" content="DAOUDA ALI Abdoul Latifou" />
+  <meta property="og:title" content="DAOUDA ALI Abdoul Latifou — Télécoms & Réseaux Fibrés" />
+  <meta property="og:description" content="Portfolio — Étudiant en Master Télécoms et Multimédia à l'ESMT, spécialisé en ingénierie des réseaux fibrés et QoS." />
+  <meta property="og:type" content="website" />
+  <title>DAOUDA ALI Abdoul Latifou — Télécoms & Réseaux Fibrés</title>
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="#home" class="nav__logo">
+        <span class="nav__logo-mark">D</span>
+        <span class="nav__logo-text">DAOUDA ALI</span>
+      </a>
+      <nav class="nav__menu" id="navMenu" aria-label="Navigation principale">
+        <a href="#home" class="nav__link">Accueil</a>
+        <a href="#profil" class="nav__link">Profil</a>
+        <a href="#competences" class="nav__link">Compétences</a>
+        <a href="#soc" class="nav__link">NOC</a>
+        <a href="#network" class="nav__link">Réseau</a>
+        <a href="#ia" class="nav__link">Supervision</a>
+        <a href="#crypto" class="nav__link">Fibre & QoS</a>
+        <a href="#experience" class="nav__link">Expérience</a>
+        <a href="#projets" class="nav__link">Projets</a>
+        <a href="#cas" class="nav__link">Études</a>
+        <a href="#stats" class="nav__link">GitHub</a>
+        <a href="#blog" class="nav__link">Blog</a>
+        <a href="#parcours" class="nav__link">Parcours</a>
+        <a href="#contact" class="nav__link nav__link--cta">Contact</a>
+      </nav>
+      <button class="nav__toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero__bg" aria-hidden="true">
+        <canvas class="hero__canvas" id="particleCanvas"></canvas>
+        <span class="hero__grid"></span>
+        <span class="hero__orb hero__orb--1"></span>
+        <span class="hero__orb hero__orb--2"></span>
+        <span class="hero__orb hero__orb--3"></span>
+      </div>
+      <div class="hero__inner container">
+        <div class="hero__badge reveal">Master Télécoms & Multimédia · ESMT Dakar</div>
+        <h1 class="hero__title reveal">
+          DAOUDA ALI<br />
+          <span class="hero__title-accent">Abdoul Latifou</span>
+        </h1>
+        <p class="hero__role reveal">Ingénieur Télécommunications · Maintenance & QoS Réseaux Fibrés</p>
+        <p class="hero__desc reveal">
+          Rigoureux, assidu et orienté résultats : supervision réseau, technologies d'accès fixe,
+          configuration CPE et administration système. Disponible pour un stage ou un
+          emploi en ingénierie télécoms et réseaux d'entreprise.
+        </p>
+        <div class="hero__actions reveal">
+          <a href="#contact" class="btn btn--primary">Me contacter <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#projets" class="btn btn--ghost"><i class="fa-solid fa-code"></i> Voir mes projets</a>
+          <a href="assets/CV_Daouda_Ali.pdf" class="btn btn--ghost" download="CV-Daouda-Ali-Telecoms.pdf"><i class="fa-solid fa-download"></i> CV</a>
+        </div>
+        <div class="hero__meta reveal">
+          <span><i class="fa-solid fa-location-dot"></i> Grand Dakar, Sénégal</span>
+          <span><i class="fa-solid fa-phone"></i> +221 78 715 09 11</span>
+          <a href="mailto:abdoul.ali.etu@esmt.sn" target="_blank" rel="noopener">
+            <i class="fa-solid fa-envelope"></i> abdoul.ali.etu@esmt.sn
+          </a>
+        </div>
+        <div class="hero__terminal reveal">
+          <div class="terminal__bar"><span class="terminal__dot terminal__dot--red"></span><span class="terminal__dot terminal__dot--yellow"></span><span class="terminal__dot terminal__dot--green"></span><span class="terminal__title">daouda@telecom: ~ — interactive shell</span></div>
+          <div class="terminal__body terminal__body--shell" id="shellBody" aria-live="polite">
+            <p class="t-line"><span class="t-prompt">visitor@portfolio:~$</span> <span class="t-typed">help</span></p>
+            <p class="t-out t-out--block">
+              Bonjour ! Bienvenue sur mon portfolio Télécoms.<br>
+              Tapez <strong>help</strong> pour explorer mes compétences en réseaux fibrés et QoS.
+            </p>
+            <p class="t-line t-blink"><span class="t-prompt">visitor@portfolio:~$</span> <span class="t-cursor">▋</span></p>
+          </div>
+          <form class="shell__form" id="shellForm" autocomplete="off">
+            <span class="t-prompt">visitor@portfolio:~$</span>
+            <input type="text" class="shell__input" id="shellInput" placeholder="help" spellcheck="false" autocomplete="off" aria-label="Terminal interactif" />
+          </form>
+        </div>
+        <a href="#profil" class="hero__scroll" aria-label="Défiler vers le profil"><i class="fa-solid fa-chevron-down"></i></a>
+      </div>
+    </section>
+
+    <section class="section" id="profil">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">01 · Profil</span>
+          <h2 class="section__title">À propos de moi</h2>
+        </div>
+        <div class="profil">
+          <div class="profil__card reveal">
+            <div class="profil__stat"><span class="profil__stat-num" data-count="2" data-suffix="+">0</span><span class="profil__stat-label">années d'expérience IT</span></div>
+            <div class="profil__stat"><span class="profil__stat-num" data-count="4" data-suffix="+">0</span><span class="profil__stat-label">projets réseaux B2B</span></div>
+            <div class="profil__stat"><span class="profil__stat-num" data-count="10" data-suffix="+">0</span><span class="profil__stat-label">technologies télécoms</span></div>
+            <div class="profil__stat"><span class="profil__stat-num" data-count="3">0</span><span class="profil__stat-label">langues parlées</span></div>
+          </div>
+          <div class="profil__text reveal">
+            <p>
+              Étudiant en <strong>Master Télécoms et Multimédia</strong> à l'ESMT de Dakar, je combine
+              une rigueur analytique et un intérêt soutenu pour les <strong>réseaux fibrés</strong>, la
+              <strong>Qualité de Service (QoS)</strong> et les <strong>technologies d'accès fixe</strong>.
+            </p>
+            <p>
+              J'ai des compétences avérées en <strong>administration système (Linux/Windows)</strong>, 
+              <strong>configuration et dépannage CPE</strong>, et <strong>supervision des performances réseau</strong>. 
+              Mon expérience opérationnelle chez Airtel Entreprise B2B me permet d'appréhender les enjeux 
+              de déploiement et de maintenance de bout en bout.
+            </p>
+            <div class="profil__chips">
+              <span class="chip"><i class="fa-solid fa-network-wired"></i> Réseaux Fibrés</span>
+              <span class="chip"><i class="fa-solid fa-chart-line"></i> QoS & Monitoring</span>
+              <span class="chip"><i class="fa-solid fa-server"></i> Administration</span>
+              <span class="chip"><i class="fa-solid fa-satellite-dish"></i> Accès Fixe</span>
+              <span class="chip"><i class="fa-solid fa-screwdriver-wrench"></i> Dépannage CPE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="competences">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">02 · Compétences</span>
+          <h2 class="section__title">Mes expertises Télécoms</h2>
+        </div>
+        <div class="skills">
+          <article class="skill reveal">
+            <div class="skill__icon"><i class="fa-solid fa-tower-cell"></i></div>
+            <h3 class="skill__title">Ingénierie Réseaux & Fibre</h3>
+            <div class="skill__bars">
+              <div class="bar"><span class="bar__label"><i class="fa-solid fa-network-wired"></i> Technologies d'Accès Fixe</span><span class="bar__pct">90%</span><div class="bar__track"><span class="bar__fill" data-width="90" style="--pct:90%"></span></div></div>
+              <div class="bar"><span class="bar__label"><i class="fa-solid fa-chart-line"></i> Qualité de Service (QoS)</span><span class="bar__pct">85%</span><div class="bar__track"><span class="bar__fill" data-width="85" style="--pct:85%"></span></div></div>
+              <div class="bar"><span class="bar__label"><i class="fa-solid fa-router"></i> Configuration & Dépannage CPE</span><span class="bar__pct">90%</span><div class="bar__track"><span class="bar__fill" data-width="90" style="--pct:90%"></span></div></div>
+              <div class="bar"><span class="bar__label"><i class="fa-solid fa-shield-halved"></i> Réseaux B2B / VPN</span><span class="bar__pct">80%</span><div class="bar__track"><span class="bar__fill" data-width="80" style="--pct:80%"></span></div></div>
+            </div>
+          </article>
+          <article class="skill reveal">
+            <div class="skill__icon"><i class="fa-solid fa-server"></i></div>
+            <h3 class="skill__title">Systèmes & Administration</h3>
+            <div class="skill__bars">
+              <div class="bar"><span class="bar__label"><i class="fa-brands fa-linux"></i> Systèmes Linux</span><span class="bar__pct">85%</span><div class="bar__track"><span class="bar__fill" data-width="85" style="--pct:85%"></span></div></div>
+              <div class="bar"><span class="bar__label"><i class="fa-brands fa-windows"></i> Systèmes Windows</span><span class="bar__pct">80%</span><div class="bar__track"><span class="bar__fill" data-width="80" style="--pct:80%"></span></div></div>
+              <div class="bar"><span class="bar__label"><i class="fa-solid fa-database"></i> Administration Réseaux</span><span class="bar__pct">85%</span><div class="bar__track"><span class="bar__fill" data-width="85" style="--pct:85%"></span></div></div>
+            </div>
+          </article>
+          <article class="skill reveal">
+            <div class="skill__icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+            <h3 class="skill__title">Supervision & Monitoring</h3>
+            <div class="skill__bars">
+              <div class="bar"><span class="bar__label"><i class="fa-solid fa-eye"></i> Surveillance Temps Réel</span><span class="bar__pct">90%</span><div class="bar__track"><span class="bar__fill" data-width="90" style="--pct:90%"></span></div></div>
+              <div class="bar"><span class="bar__label"><i class="fa-solid fa-bug"></i> Détection d'Anomalies</span><span class="bar__pct">85%</span><div class="bar__track"><span class="bar__fill" data-width="85" style="--pct:85%"></span></div></div>
+              <div class="bar"><span class="bar__label"><i class="fa-solid fa-file-lines"></i> Reporting & Analyse</span><span class="bar__pct">80%</span><div class="bar__track"><span class="bar__fill" data-width="80" style="--pct:80%"></span></div></div>
+            </div>
+          </article>
+          <article class="skill reveal">
+            <div class="skill__icon"><i class="fa-solid fa-brain"></i></div>
+            <h3 class="skill__title">Savoir-être (Soft Skills)</h3>
+            <div class="skill__bars">
+              <div class="bar"><span class="bar__label"><i class="fa-solid fa-bolt"></i> Réactivité & Proactivité</span><span class="bar__pct">95%</span><div class="bar__track"><span class="bar__fill" data-width="95" style="--pct:95%"></span></div></div>
+              <div class="bar"><span class="bar__label"><i class="fa-solid fa-magnifying-glass"></i> Esprit d'analyse</span><span class="bar__pct">90%</span><div class="bar__track"><span class="bar__fill" data-width="90" style="--pct:90%"></span></div></div>
+              <div class="bar"><span class="bar__label"><i class="fa-solid fa-clock"></i> Ponctualité & Assiduité</span><span class="bar__pct">100%</span><div class="bar__track"><span class="bar__fill" data-width="100" style="--pct:100%"></span></div></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="soc">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">03 · NOC</span>
+          <h2 class="section__title">Centre de Supervision Réseau (NOC)</h2>
+          <p class="section__sub">État des systèmes en temps réel : supervision, charge et qualité de service (QoS).</p>
+        </div>
+        <div class="soc reveal" id="socDashboard">
+          <div class="soc__top">
+            <div class="soc__status"><span class="soc__pulse"></span> <span id="socClock">--:--:--</span> &nbsp;·&nbsp; MONITORING ACTIVE</div>
+            <div class="soc__tabs"><span class="soc__tab soc__tab--active">Overview</span><span class="soc__tab">Alerts</span><span class="soc__tab">Network</span></div>
+          </div>
+          <div class="soc__grid">
+            <div class="soc__card">
+              <span class="soc__label"><i class="fa-solid fa-satellite-dish"></i> Lien Fibre</span>
+              <div class="soc__bar"><span class="soc__fill" id="socCpuFill"></span></div>
+              <div class="soc__meta"><span class="soc__val" id="socCpuVal">98%</span><span class="soc__hint">Disponibilité optimale</span></div>
+            </div>
+            <div class="soc__card">
+              <span class="soc__label"><i class="fa-solid fa-gauge-high"></i> Bande Passante</span>
+              <div class="soc__bar"><span class="soc__fill soc__fill--blue" id="socMemFill"></span></div>
+              <div class="soc__meta"><span class="soc__val" id="socMemVal">75%</span><span class="soc__hint">Charge réseau B2B</span></div>
+            </div>
+            <div class="soc__card">
+              <span class="soc__label"><i class="fa-solid fa-tower-cell"></i> Latence</span>
+              <div class="soc__bar"><span class="soc__fill soc__fill--orange" id="socNetFill"></span></div>
+              <div class="soc__meta"><span class="soc__val" id="socNetVal">12 ms</span><span class="soc__hint">QoS excellente</span></div>
+            </div>
+            <div class="soc__card">
+              <span class="soc__label"><i class="fa-solid fa-shield-halved"></i> État CPE</span>
+              <div class="soc__threat"><span class="soc__threat-badge" id="socThreat">OK</span></div>
+              <div class="soc__meta"><span class="soc__hint">aucune anomalie</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="network">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">04 · Réseau</span>
+          <h2 class="section__title">Architecture réseau B2B — survolez chaque équipement</h2>
+          <p class="section__sub">Schéma de déploiement : Internet → Routeur → Switch → CPE Client.</p>
+        </div>
+        <div class="netmap reveal" id="netmap">
+          <div class="netmap__node netmap__node--internet" data-role="Internet"><i class="fa-solid fa-globe"></i><span>Internet</span></div>
+          <div class="netmap__conn netmap__conn--1"><span class="netmap__flow"></span></div>
+          <div class="netmap__node netmap__node--firewall" data-role="Routeur"><i class="fa-solid fa-router"></i><span>Routeur</span></div>
+          <div class="netmap__conn netmap__conn--2"><span class="netmap__flow"></span></div>
+          <div class="netmap__zone netmap__zone--dmz">
+            <div class="netmap__zone-title">Réseau Entreprise</div>
+            <div class="netmap__node netmap__node--server" data-role="Switch"><i class="fa-solid fa-network-wired"></i><span>Switch</span></div>
+            <div class="netmap__node netmap__node--server" data-role="VPN"><i class="fa-solid fa-lock"></i><span>VPN</span></div>
+          </div>
+          <div class="netmap__conn netmap__conn--3"><span class="netmap__flow"></span></div>
+          <div class="netmap__zone netmap__zone--lan">
+            <div class="netmap__zone-title">Clients B2B</div>
+            <div class="netmap__node netmap__node--pc" data-role="CPE"><i class="fa-solid fa-wifi"></i><span>CPE</span></div>
+            <div class="netmap__node netmap__node--pc" data-role="Poste"><i class="fa-solid fa-desktop"></i><span>PC</span></div>
+          </div>
+          <div class="netmap__tooltip" id="netmapTooltip">Survolez un équipement</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ia">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">05 · Supervision</span>
+          <h2 class="section__title">Outils de Monitoring & Détection</h2>
+          <p class="section__sub">Supervision en temps réel des performances réseau et détection proactive des anomalies pour garantir une disponibilité optimale.</p>
+        </div>
+        <div class="ai reveal">
+          <div class="ai__chat">
+            <div class="ai__bar"><span class="ai__status"><span class="soc__pulse"></span> Monitoring · Airtel B2B</span></div>
+            <div class="ai__log" id="aiLog" aria-live="polite">
+              <div class="ai__msg ai__msg--bot"><span class="ai__who">NOC</span><span class="ai__text">Analyse des performances réseau et production de rapports réguliers pour recommander des améliorations et optimiser les infrastructures.</span></div>
+            </div>
+          </div>
+          <div class="ai__agent">
+            <h3 class="sub-title"><i class="fa-solid fa-diagram-project"></i> Cycle de résolution d'incident</h3>
+            <div class="agent">
+              <div class="agent__step" data-step="plan"><span class="agent__icon"><i class="fa-solid fa-bell"></i></span><div><strong>Alerte</strong><small>détection anomalie</small></div></div>
+              <div class="agent__step" data-step="execute"><span class="agent__icon"><i class="fa-solid fa-magnifying-glass"></i></span><div><strong>Diagnostic</strong><small>analyse des logs</small></div></div>
+              <div class="agent__step" data-step="observe"><span class="agent__icon"><i class="fa-solid fa-wrench"></i></span><div><strong>Résolution</strong><small>réparation rapide</small></div></div>
+              <div class="agent__step" data-step="replan"><span class="agent__icon"><i class="fa-solid fa-file-lines"></i></span><div><strong>Reporting</strong><small>rapport d'incident</small></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="crypto">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">06 · Fibre & QoS</span>
+          <h2 class="section__title">Technologies d'Accès Fixe & Qualité de Service</h2>
+          <p class="section__sub">Garantir une disponibilité optimale et minimiser les interruptions de service pour les clients B2B.</p>
+        </div>
+        <div class="crypto reveal">
+          <div class="crypto__pq">
+            <h3 class="sub-title"><i class="fa-solid fa-cubes"></i> Paramètres QoS Supervisés</h3>
+            <div class="pq-grid">
+              <div class="pq-card"><span class="pq-card__name">Latence</span><span class="pq-card__type">Ping</span><span class="pq-card__badge pq-card__badge--nist">< 20ms</span></div>
+              <div class="pq-card"><span class="pq-card__name">Gigue</span><span class="pq-card__type">Jitter</span><span class="pq-card__badge pq-card__badge--nist">Faible</span></div>
+              <div class="pq-card"><span class="pq-card__name">Perte de paquets</span><span class="pq-card__type">Packet Loss</span><span class="pq-card__badge pq-card__badge--safe">0.01%</span></div>
+              <div class="pq-card"><span class="pq-card__name">Débit</span><span class="pq-card__type">Throughput</span><span class="pq-card__badge pq-card__badge--safe">Optimal</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">07 · Expérience</span>
+          <h2 class="section__title">Parcours professionnel</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card">
+              <div class="timeline__head">
+                <h3 class="timeline__title">Supervision réseau Airtel Entreprise B2B</h3>
+                <span class="timeline__date">Oct 2023 — Sep 2024</span>
+              </div>
+              <p class="timeline__org"><i class="fa-solid fa-building"></i> T.M.C Niger | Niamey, Niger (Stage)</p>
+              <ul class="timeline__list">
+                <li>Surveillance en temps réel des performances réseau et détection proactive des anomalies.</li>
+                <li>Gestion des incidents réseau, résolution rapide des pannes et coordination avec les équipes techniques.</li>
+                <li>Analyse des performances et production de rapports réguliers pour optimiser les infrastructures.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card">
+              <div class="timeline__head">
+                <h3 class="timeline__title">Technicien réseau Airtel Entreprise B2B</h3>
+                <span class="timeline__date">Sep 2022 — Déc 2022</span>
+              </div>
+              <p class="timeline__org"><i class="fa-solid fa-network-wired"></i> RAINBOW Sarl | Niamey, Niger (Stage)</p>
+              <ul class="timeline__list">
+                <li>Installation et configuration de réseaux (internet, VPN, lignes dédiées) pour les clients B2B.</li>
+                <li>Assistance technique et résolution d'incidents liés à la connectivité.</li>
+                <li>Monitoring des performances réseau et reporting.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card">
+              <div class="timeline__head">
+                <h3 class="timeline__title">Master Télécoms et Multimédia</h3>
+                <span class="timeline__date">2024 — 2026</span>
+              </div>
+              <p class="timeline__org"><i class="fa-solid fa-graduation-cap"></i> ESMT — Dakar, Sénégal</p>
+              <ul class="timeline__list">
+                <li>Master 1 (2024-2025) et Master 2 en cours du soir (2025-2026).</li>
+                <li>Spécialisation en ingénierie des réseaux fibrés et QoS.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card">
+              <div class="timeline__head">
+                <h3 class="timeline__title">Licence en Réseau Informatique et Télécommunications</h3>
+                <span class="timeline__date">2023</span>
+              </div>
+              <p class="timeline__org"><i class="fa-solid fa-graduation-cap"></i> I.A.T — Niger</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="projets">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">08 · Projets</span>
+          <h2 class="section__title">Réalisations Télécoms</h2>
+        </div>
+        <div class="projects">
+          <article class="project reveal" data-tilt>
+            <div class="project__icon"><i class="fa-solid fa-chart-line"></i></div>
+            <div class="project__body">
+              <div class="project__tags"><span>Monitoring</span><span>QoS</span><span>Reporting</span></div>
+              <h3 class="project__title">Optimisation des Performances Réseau B2B</h3>
+              <p class="project__desc">Analyse des performances réseau et production de rapports réguliers pour recommander des améliorations.</p>
+              <div class="project__metrics">
+                <div class="metric"><span class="metric__val" data-count="99" data-suffix="%">0%</span><span class="metric__label">disibilité garantie</span></div>
+                <div class="metric"><span class="metric__val" data-count="24" data-suffix="/7">0/7</span><span class="metric__label">supervision</span></div>
+              </div>
+            </div>
+          </article>
+          <article class="project reveal" data-tilt>
+            <div class="project__icon"><i class="fa-solid fa-wifi"></i></div>
+            <div class="project__body">
+              <div class="project__tags"><span>CPE</span><span>VPN</span><span>B2B</span></div>
+              <h3 class="project__title">Déploiement de Réseaux d'Entreprise</h3>
+              <p class="project__desc">Installation et configuration de réseaux (internet, VPN, lignes dédiées) pour les clients B2B.</p>
+              <div class="project__metrics">
+                <div class="metric"><span class="metric__val" data-count="100" data-suffix="%">0%</span><span class="metric__label">configurations réussies</span></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="parcours">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">09 · Parcours</span>
+          <h2 class="section__title">Formation & Langues</h2>
+        </div>
+        <div class="two-col">
+          <div class="reveal">
+            <h3 class="sub-title"><i class="fa-solid fa-graduation-cap"></i> Formation</h3>
+            <div class="certs">
+              <div class="cert">
+                <span class="cert__badge"><i class="fa-solid fa-satellite-dish"></i></span>
+                <div><p class="cert__name">Master Télécoms et Multimédia</p><p class="cert__org">ESMT, Dakar · 2024 — 2026</p></div>
+              </div>
+              <div class="cert">
+                <span class="cert__badge"><i class="fa-solid fa-network-wired"></i></span>
+                <div><p class="cert__name">Licence Réseau Informatique et Télécoms</p><p class="cert__org">I.A.T Niger · 2023</p></div>
+              </div>
+              <div class="cert">
+                <span class="cert__badge"><i class="fa-solid fa-school"></i></span>
+                <div><p class="cert__name">Baccalauréat Série D (BAC D)</p><p class="cert__org">Niger · 2020</p></div>
+              </div>
+            </div>
+          </div>
+          <div class="reveal">
+            <h3 class="sub-title"><i class="fa-solid fa-language"></i> Langues</h3>
+            <div class="langs">
+              <div class="lang"><span><i class="fa-solid fa-flag"></i> Français</span><div class="lang__bar"><span class="lang__fill" data-width="100" style="--pct:100%"></span></div><span class="lang__level">Excellent</span></div>
+              <div class="lang"><span><i class="fa-solid fa-language"></i> Zarma & Hausa</span><div class="lang__bar"><span class="lang__fill" data-width="90" style="--pct:90%"></span></div><span class="lang__level">Très bon</span></div>
+              <div class="lang"><span><i class="fa-solid fa-globe"></i> Anglais</span><div class="lang__bar"><span class="lang__fill" data-width="50" style="--pct:50%"></span></div><span class="lang__level">Passable</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--contact" id="contact">
+      <div class="container">
+        <div class="contact reveal">
+          <span class="section__tag">10 · Contact</span>
+          <h2 class="contact__title">Discutons de votre projet</h2>
+          <p class="contact__desc">
+            Disponible pour un stage ou un emploi en ingénierie télécoms, maintenance réseau ou supervision.
+            N'hésitez pas à me contacter — je réponds rapidement.
+          </p>
+          <div class="contact__links">
+            <a href="mailto:abdoul.ali.etu@esmt.sn" class="contact__link"><i class="fa-solid fa-envelope"></i><span>abdoul.ali.etu@esmt.sn</span></a>
+            <a href="tel:+221787150911" class="contact__link"><i class="fa-solid fa-phone"></i><span>+221 78 715 09 11</span></a>
+            <a href="assets/CV_Daouda_Ali.pdf" download="CV-Daouda-Ali.pdf" class="contact__link"><i class="fa-solid fa-file-arrow-down"></i><span>Télécharger mon CV</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> DAOUDA ALI Abdoul Latifou</p>
+      <a href="#home" class="footer__top"><i class="fa-solid fa-arrow-up"></i> Retour en haut</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
