@@ -58,7 +58,7 @@ function connectParticles() {
 
 function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  
+
   particles.forEach(particle => {
     particle.update();
     particle.draw();
@@ -125,7 +125,7 @@ const counterObserver = new IntersectionObserver((entries) => {
       const suffix = entry.target.getAttribute('data-suffix') || '';
       let current = 0;
       const increment = target / 50;
-      
+
       const updateCounter = () => {
         if (current < target) {
           current += increment;
@@ -135,7 +135,7 @@ const counterObserver = new IntersectionObserver((entries) => {
           entry.target.textContent = target + suffix;
         }
       };
-      
+
       updateCounter();
       counterObserver.unobserve(entry.target);
     }
@@ -186,10 +186,10 @@ const shellBody = document.getElementById('shellBody');
 
 const commands = {
   help: 'Commandes disponibles : <strong>help</strong>, <strong>profil</strong>, <strong>competences</strong>, <strong>experience</strong>, <strong>contact</strong>, <strong>clear</strong>',
-  profil: 'Ingénieur en Télécommunications, spécialisé en Maintenance et QoS des Réseaux Fibrés. Actuellement en Master à l\'ESMT de Dakar.',
-  competences: 'Technologies d\'Accès Fixe, Qualité de Service (QoS), Configuration et Dépannage CPE, Systèmes Linux/Windows, Supervision réseau.',
-  experience: 'Stage chez T.M.C Niger (Supervision réseau Airtel B2B) et RAINBOW Sarl (Technicien réseau B2B).',
-  contact: 'Email : abdoul.ali.etu@esmt.sn | Tél : +221 78 715 09 11 | Localisation : Grand Dakar, Sénégal',
+  profil: 'Ingénieur support FAI chez ALTEN Sénégal, spécialisé en qualité fibre FTTH et QoS. Actuellement en Master à l\'ESMT de Dakar.',
+  competences: 'FTTH, GPON, xDSL, Qualité de Service (QoS), Configuration et Dépannage CPE, MPLS/OSPF/BGP, Cœur de réseau mobile (EPC, IMS), Systèmes Linux/Windows, Supervision réseau.',
+  experience: 'Ingénieur support FAI chez ALTEN (depuis fév. 2026), Superviseur réseau chez T.M.C Niger (Airtel B2B), Technicien réseau chez RAINBOW Sarl (Airtel B2B).',
+  contact: 'Email : abdoul.ali.etu@esmt.sn | Tél : +221 78 715 09 11 | LinkedIn : linkedin.com/in/daouda-ali-abdoul-latifou | Localisation : Grand Dakar, Sénégal',
   clear: 'CLEAR'
 };
 
@@ -197,14 +197,14 @@ if (shellForm) {
   shellForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const cmd = shellInput.value.trim().toLowerCase();
-    
+
     if (cmd) {
       // Ajouter la commande tapée
       const line = document.createElement('p');
       line.className = 't-line';
       line.innerHTML = `<span class="t-prompt">visitor@portfolio:~$</span> <span class="t-typed">${cmd}</span>`;
       shellBody.insertBefore(line, shellBody.lastElementChild);
-      
+
       // Répondre
       if (cmd === 'clear') {
         shellBody.innerHTML = '<p class="t-line t-blink"><span class="t-prompt">visitor@portfolio:~$</span> <span class="t-cursor">▋</span></p>';
@@ -215,7 +215,7 @@ if (shellForm) {
         output.innerHTML = response;
         shellBody.insertBefore(output, shellBody.lastElementChild);
       }
-      
+
       shellInput.value = '';
       shellBody.scrollTop = shellBody.scrollHeight;
     }
@@ -256,7 +256,7 @@ netmapNodes.forEach(node => {
       netmapTooltip.style.opacity = '1';
     }
   });
-  
+
   node.addEventListener('mouseleave', () => {
     if (netmapTooltip) {
       netmapTooltip.style.opacity = '0';
@@ -271,16 +271,16 @@ tiltCards.forEach(card => {
     const rect = card.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
-    
+
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
-    
+
     const rotateX = (y - centerY) / 10;
     const rotateY = (centerX - x) / 10;
-    
+
     card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
   });
-  
+
   card.addEventListener('mouseleave', () => {
     card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
   });
