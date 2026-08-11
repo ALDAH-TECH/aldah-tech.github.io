@@ -580,6 +580,17 @@ if (projectFilters) {
   });
 }
 
+/* === DÉTAIL DES CARTES PROJETS (voir plus / voir moins) === */
+document.querySelectorAll('.project__more').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const card = btn.closest('.project');
+    const willOpen = !card.classList.contains('project--open');
+    card.classList.toggle('project--open', willOpen);
+    btn.firstChild.textContent = willOpen ? 'Masquer le détail ' : 'Voir le détail ';
+  });
+});
+
 /* === ACCORDÉON ÉTUDES DE CAS === */
 document.querySelectorAll('.case__toggle').forEach(toggleBtn => {
   toggleBtn.addEventListener('click', () => {
