@@ -112,7 +112,7 @@
           </div>
           <div class="hero__meta reveal">
             <button type="button" class="hero__meta-copy" data-copy="+221787150911"><i class="fa-solid fa-location-dot"></i> Grand Dakar, Sénégal</button>
-            <button type="button" class="hero__meta-copy" data-copy="+221787150911"><i class="fa-solid fa-phone"></i> +221 78 715 09 11</button>
+            <a href="https://wa.me/221787150911" target="_blank" rel="noopener" class="hero__meta-whatsapp"><i class="fa-brands fa-whatsapp"></i> +221 78 715 09 11</a>
             <a href="https://linkedin.com/in/daouda-ali-abdoul-latifou" target="_blank" rel="noopener">
               <i class="fa-brands fa-linkedin"></i> LinkedIn
             </a>
@@ -584,129 +584,347 @@
         </div>
         <div class="projects__filters reveal" id="projectFilters">
           <button type="button" class="pfilter pfilter--active" data-filter="all">Tous</button>
-          <button type="button" class="pfilter" data-filter="Open5GS">5G / Cœur réseau</button>
+          <button type="button" class="pfilter" data-filter="5G">5G / Cœur réseau</button>
           <button type="button" class="pfilter" data-filter="Cisco">Sécurité / ACL</button>
-          <button type="button" class="pfilter" data-filter="EVE-NG">Labs réseaux</button>
+          <button type="button" class="pfilter" data-filter="Radio">Radio &amp; Transmission</button>
+          <button type="button" class="pfilter" data-filter="Lab">Labs &amp; Infrastructures</button>
+          <button type="button" class="pfilter" data-filter="Data">Data &amp; Supervision</button>
         </div>
         <div class="projects" id="projectsGrid">
-          <article class="project reveal" data-tilt data-tags="Open5GS Suricata SDN Grafana">
+          <article class="project reveal" data-tilt data-tags="Open5GS Suricata SDN Grafana 5G">
             <div class="project__icon"><i class="fa-solid fa-shield-virus"></i></div>
             <div class="project__body">
-              <div class="project__tags"><span>Open5GS</span><span>Suricata</span><span>SDN</span><span>Grafana</span></div>
+              <div class="project__tophead">
+                <div class="project__tags"><span>Open5GS</span><span>Suricata</span><span>SDN</span><span>Grafana</span></div>
+                <span class="project__status project__status--done">Terminé</span>
+              </div>
               <h3 class="project__title">Cœur 5G SA sécurisé — détection &amp; réaction automatisées</h3>
               <p class="project__desc">Déploiement multi-site d'un cœur 5G SA (Open5GS) en machine virtuelle Ubuntu, avec chaîne complète de détection d'attaques et réaction automatisée des blocages.</p>
-              <ul class="project__points">
-                <li><i class="fa-solid fa-check"></i> Cœur 5G SA complet (AMF, SMF, UPF, UDM, AUSF, NSSF…) — 2 sites (Plateau, Mermoz) + 10 UE simulés</li>
-                <li><i class="fa-solid fa-check"></i> Attaques injectées (ICMP Flood, PFCP Flood N4) détectées par Suricata, bloquées via Open vSwitch (DropFlow)</li>
-                <li><i class="fa-solid fa-check"></i> Supervision temps réel Prometheus + Grafana : latence (ms), CPU/RAM, alertes &amp; événements</li>
-              </ul>
-              <div class="project__metrics">
-                <div class="metric"><span class="metric__val" data-count="2">0</span><span class="metric__label">sites 5G simulés</span></div>
-                <div class="metric"><span class="metric__val" data-count="10">0</span><span class="metric__label">UE simulés</span></div>
-                <div class="metric"><span class="metric__val" data-count="100" data-suffix="%">0%</span><span class="metric__label">blocage automatisé</span></div>
+              <button type="button" class="project__more">Voir le détail <i class="fa-solid fa-chevron-down"></i></button>
+              <div class="project__details">
+                <ul class="project__points">
+                  <li><i class="fa-solid fa-check"></i> Cœur 5G SA complet (AMF, SMF, UPF, UDM, AUSF, NSSF, NRF…) — 2 sites (Plateau, Mermoz) + 10 UE simulés via UERANSIM</li>
+                  <li><i class="fa-solid fa-check"></i> Attaques injectées (ICMP Flood, PFCP Flood N4/N8805) détectées par Suricata, bloquées via Open vSwitch (Ryu/SDN, DropFlow)</li>
+                  <li><i class="fa-solid fa-check"></i> Supervision temps réel Prometheus + Grafana : latence (ms), CPU/RAM, alertes &amp; événements, export ogstun-exporter</li>
+                </ul>
+                <div class="project__metrics">
+                  <div class="metric"><span class="metric__val" data-count="2">0</span><span class="metric__label">sites 5G simulés</span></div>
+                  <div class="metric"><span class="metric__val" data-count="10">0</span><span class="metric__label">UE simulés</span></div>
+                  <div class="metric"><span class="metric__val" data-count="100" data-suffix="%">0%</span><span class="metric__label">blocage automatisé</span></div>
+                </div>
+                <div class="project__arch">
+                  <span class="arch__node">UERANSIM (gNB)</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">Open5GS</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">OVS/Ryu</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">Suricata</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">Prometheus/Grafana</span>
+                </div>
+                <p class="project__result"><i class="fa-solid fa-circle-check"></i> 3 scénarios validés : pédagogique, expérimental et analytique.</p>
               </div>
-              <div class="project__arch">
-                <span class="arch__node">gNodeB</span><i class="fa-solid fa-arrow-right"></i>
-                <span class="arch__node">Open5GS</span><i class="fa-solid fa-arrow-right"></i>
-                <span class="arch__node">OVS</span><i class="fa-solid fa-arrow-right"></i>
-                <span class="arch__node">Suricata</span><i class="fa-solid fa-arrow-right"></i>
-                <span class="arch__node">Grafana</span>
-              </div>
-              <p class="project__result"><i class="fa-solid fa-circle-check"></i> 3 scénarios validés : pédagogique, expérimental et analytique.</p>
             </div>
           </article>
 
-          <article class="project reveal" data-tilt data-tags="Cisco ACL Time-range Multi-LAN">
-            <div class="project__icon"><i class="fa-solid fa-user-lock"></i></div>
-            <div class="project__body">
-              <div class="project__tags"><span>Cisco</span><span>ACL</span><span>Time-range</span><span>Multi-LAN</span></div>
-              <h3 class="project__title">Sécurisation multi-sites via ACL Cisco</h3>
-              <p class="project__desc">Conception et déploiement de politiques de contrôle d'accès multi-couches sur une architecture multi-LAN interconnectée par routeurs Cisco : qui peut faire quoi, quand, et vers où.</p>
-              <ul class="project__points">
-                <li><i class="fa-solid fa-check"></i> Filtrage applicatif : HTTP/HTTPS uniquement vers serveur cible, tout autre flux rejeté</li>
-                <li><i class="fa-solid fa-check"></i> Politiques granulaires par poste (ping+SSH, ping+FTP) et contrôle d'accès temporel (time-range)</li>
-                <li><i class="fa-solid fa-check"></i> Flux inter-sites sécurisés (ping + FTP seuls autorisés) et règles conditionnées au calendrier (week-end)</li>
-              </ul>
-              <div class="project__metrics">
-                <div class="metric"><span class="metric__val" data-count="5">0</span><span class="metric__label">politiques déployées</span></div>
-                <div class="metric"><span class="metric__val" data-count="4">0</span><span class="metric__label">LAN segmentés</span></div>
-                <div class="metric"><span class="metric__val" data-count="100" data-suffix="%">0%</span><span class="metric__label">flux contrôlés</span></div>
-              </div>
-              <div class="project__arch">
-                <span class="arch__node">LAN 1/2</span><i class="fa-solid fa-arrow-right"></i>
-                <span class="arch__node">Router1</span><i class="fa-solid fa-arrow-right"></i>
-                <span class="arch__node">ACL</span><i class="fa-solid fa-arrow-right"></i>
-                <span class="arch__node">Router2</span><i class="fa-solid fa-arrow-right"></i>
-                <span class="arch__node">LAN 10/20</span>
-              </div>
-              <p class="project__result"><i class="fa-solid fa-circle-check"></i> Même rigueur que le contrôle qualité FTTH chez ALTEN : fiabilité et sécurisation des infrastructures.</p>
-            </div>
-          </article>
-
-          <article class="project reveal" data-tilt data-tags="MPLS QoS Multi-VLAN">
-            <div class="project__icon"><i class="fa-solid fa-network-wired"></i></div>
-            <div class="project__body">
-              <div class="project__tags"><span>MPLS</span><span>QoS</span><span>Multi-VLAN</span></div>
-              <h3 class="project__title">Lab QoS/MPLS &amp; Maquette réseau multi-sites</h3>
-              <p class="project__desc">Implémentation de politiques DiffServ &amp; MPLS-TE, mesure latence/débit, multi-VLAN, routage inter-VLAN (OSPF), VPN site-à-site IPsec.</p>
-              <div class="project__metrics">
-                <div class="metric"><span class="metric__val" data-count="99" data-suffix="%">0%</span><span class="metric__label">disponibilité garantie</span></div>
-                <div class="metric"><span class="metric__val" data-count="24" data-suffix="/7">0/7</span><span class="metric__label">supervision</span></div>
-                <div class="metric"><span class="metric__val" data-count="4" data-suffix=" VLAN">0 VLAN</span><span class="metric__label">segmentés</span></div>
-              </div>
-              <p class="project__result"><i class="fa-solid fa-circle-check"></i> Lab validé, VPN IPsec site-à-site fonctionnel avec basculement automatique.</p>
-            </div>
-          </article>
-
-          <article class="project reveal" data-tilt data-tags="4G/5G EPC IMS Atoll">
-            <div class="project__icon"><i class="fa-solid fa-signal"></i></div>
-            <div class="project__body">
-              <div class="project__tags"><span>4G/5G</span><span>EPC</span><span>IMS</span><span>Atoll</span></div>
-              <h3 class="project__title">Simulation d'un réseau mobile 4G/5G — Atoll</h3>
-              <p class="project__desc">Modélisation de l'architecture (eNodeB/gNodeB, EPC, IMS) et analyse de la qualité de service radio avec Atoll et MATLAB.</p>
-              <figure class="project__chart reveal">
-                <svg viewBox="0 0 320 120" preserveAspectRatio="none">
-                  <defs>
-                    <linearGradient id="lrGrad" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stop-color="rgba(77,159,255,0.35)"/>
-                      <stop offset="100%" stop-color="rgba(77,159,255,0)"/>
-                    </linearGradient>
-                  </defs>
-                  <polyline points="0,95 32,82 64,70 96,58 128,46 160,38 192,30 224,24 256,20 288,16 320,14" fill="none" stroke="#4d9fff" stroke-width="2" style="filter: drop-shadow(0 0 4px rgba(77,159,255,0.6));"/>
-                  <polygon points="0,95 32,82 64,70 96,58 128,46 160,38 192,30 224,24 256,20 288,16 320,14 320,120 0,120" fill="url(#lrGrad)"/>
-                </svg>
-                <figcaption>Couverture RSRP (dBm) — optimisation sur 11 sites pilotes.</figcaption>
-              </figure>
-              <p class="project__result"><i class="fa-solid fa-circle-check"></i> Plan de fréquences validé, couverture &gt; 95% sur zone urbaine dense.</p>
-            </div>
-          </article>
-
-          <article class="project reveal" data-tilt data-tags="EVE-NG GNS3 VPN">
+          <article class="project reveal" data-tilt data-tags="React FastAPI Cytoscape.js WebSocket 5G Data PostgreSQL Docker">
             <div class="project__icon"><i class="fa-solid fa-diagram-project"></i></div>
             <div class="project__body">
-              <div class="project__tags"><span>EVE-NG</span><span>GNS3</span><span>VPN</span></div>
-              <h3 class="project__title">Lab réseau EVE-NG / GNS3</h3>
-              <p class="project__desc">Lab GNS3/EVE-NG conséquent : configuration VPN site-à-site, équipements Cisco/Huawei, dépannage et validation de scénarios réseau d'entreprise.</p>
-              <div class="project__arch">
-                <span class="arch__node">Site A</span><i class="fa-solid fa-arrow-right"></i>
-                <span class="arch__node">VPN IPsec</span><i class="fa-solid fa-arrow-right"></i>
-                <span class="arch__node">Site B</span><i class="fa-solid fa-arrow-right"></i>
-                <span class="arch__node">Cloud</span>
+              <div class="project__tophead">
+                <div class="project__tags"><span>React</span><span>FastAPI</span><span>Cytoscape.js</span><span>WebSocket</span></div>
+                <span class="project__status project__status--progress">En conception</span>
               </div>
-              <p class="project__result"><i class="fa-solid fa-circle-check"></i> Scénarios validés : OSPF, BGP, IPsec, QoS inter-VLAN.</p>
+              <h3 class="project__title">Plateforme de supervision 5G &amp; cybersécurité (NOC/SOC web)</h3>
+              <p class="project__desc">Interface web temps réel visualisant la topologie du cœur 5G, les Network Functions, les alertes de sécurité et les métriques — pensée comme la pièce maîtresse reliant mes compétences télécom, réseau, sécurité et développement.</p>
+              <button type="button" class="project__more">Voir le détail <i class="fa-solid fa-chevron-down"></i></button>
+              <div class="project__details">
+                <ul class="project__points">
+                  <li><i class="fa-solid fa-check"></i> Frontend React + TypeScript + Cytoscape.js pour une carte réseau dynamique et des nœuds interactifs</li>
+                  <li><i class="fa-solid fa-check"></i> Backend FastAPI, base PostgreSQL + cache Redis, flux temps réel en WebSocket</li>
+                  <li><i class="fa-solid fa-check"></i> Alimentée par Open5GS, Suricata, Prometheus et OVS/Ryu, conteneurisée via Docker Compose</li>
+                </ul>
+                <div class="project__arch">
+                  <span class="arch__node">React + Cytoscape</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">FastAPI</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">PostgreSQL/Redis</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">Open5GS/Suricata</span>
+                </div>
+                <p class="project__result"><i class="fa-solid fa-circle-check"></i> Interface type NOC/SOC : topologie, alarmes, historique, call-flow 5G — projet phare de mon portfolio technique.</p>
+              </div>
             </div>
           </article>
 
-          <article class="project reveal" data-tilt data-tags="Linux DNS Mail">
+          <article class="project reveal" data-tilt data-tags="Radio Mobile FH MPR Bilan-de-liaison">
+            <div class="project__icon"><i class="fa-solid fa-tower-broadcast"></i></div>
+            <div class="project__body">
+              <div class="project__tophead">
+                <div class="project__tags"><span>Radio Mobile</span><span>FH/MPR</span><span>1300 MHz</span></div>
+                <span class="project__status project__status--study">Étude académique</span>
+              </div>
+              <h3 class="project__title">Liaison Faisceau Hertzien / Radio Mobile — ESMT</h3>
+              <p class="project__desc">Étude et dimensionnement d'une liaison FH/MPR à 1300 MHz reliant le siège de l'ESMT à deux annexes (Diamniadio, Thiès), sous la supervision du Dr. Soidridine Moussa Moindze.</p>
+              <button type="button" class="project__more">Voir le détail <i class="fa-solid fa-chevron-down"></i></button>
+              <div class="project__details">
+                <ul class="project__points">
+                  <li><i class="fa-solid fa-check"></i> Siège → Annexe 1 (Diamniadio) : 26,8 km — puissance reçue -76,87 dBm — marge -3,94 dB</li>
+                  <li><i class="fa-solid fa-check"></i> Siège → Annexe 2 (Thiès) : 55,157 km — puissance reçue -79,14 dBm — marge -6,20 dB</li>
+                  <li><i class="fa-solid fa-check"></i> Annexe 1 → Annexe 2 : puissance reçue -76,09 dBm — marge -3,09 dB</li>
+                </ul>
+                <div class="project__arch">
+                  <span class="arch__node">ESMT Siège</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">Annexe Diamniadio</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">Annexe Thiès</span>
+                </div>
+                <p class="project__result"><i class="fa-solid fa-circle-check"></i> Marges négatives identifiées ; solutions étudiées : hauteur/gain d'antennes, réduction des pertes câble, relais intermédiaires.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-tilt data-tags="Cisco ACL Time-range Multi-LAN Lab">
+            <div class="project__icon"><i class="fa-solid fa-user-lock"></i></div>
+            <div class="project__body">
+              <div class="project__tophead">
+                <div class="project__tags"><span>Cisco</span><span>ACL</span><span>Time-range</span><span>Multi-LAN</span></div>
+                <span class="project__status project__status--done">Terminé</span>
+              </div>
+              <h3 class="project__title">Sécurisation multi-sites via ACL Cisco</h3>
+              <p class="project__desc">Conception et déploiement de politiques de contrôle d'accès multi-couches sur une architecture multi-LAN interconnectée par routeurs Cisco : qui peut faire quoi, quand, et vers où.</p>
+              <button type="button" class="project__more">Voir le détail <i class="fa-solid fa-chevron-down"></i></button>
+              <div class="project__details">
+                <ul class="project__points">
+                  <li><i class="fa-solid fa-check"></i> Filtrage applicatif : HTTP/HTTPS uniquement vers serveur cible, tout autre flux rejeté</li>
+                  <li><i class="fa-solid fa-check"></i> Politiques granulaires par poste (ping+SSH, ping+FTP) et contrôle d'accès temporel (time-range)</li>
+                  <li><i class="fa-solid fa-check"></i> Flux inter-sites sécurisés (ping + FTP seuls autorisés) et règles conditionnées au calendrier (week-end)</li>
+                </ul>
+                <div class="project__metrics">
+                  <div class="metric"><span class="metric__val" data-count="5">0</span><span class="metric__label">politiques déployées</span></div>
+                  <div class="metric"><span class="metric__val" data-count="4">0</span><span class="metric__label">LAN segmentés</span></div>
+                  <div class="metric"><span class="metric__val" data-count="100" data-suffix="%">0%</span><span class="metric__label">flux contrôlés</span></div>
+                </div>
+                <div class="project__arch">
+                  <span class="arch__node">LAN 1/2</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">Router1</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">ACL</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">Router2</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">LAN 10/20</span>
+                </div>
+                <p class="project__result"><i class="fa-solid fa-circle-check"></i> Même rigueur que le contrôle qualité FTTH chez ALTEN : fiabilité et sécurisation des infrastructures.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-tilt data-tags="Cisco FTD FMC ACL Multi-sites">
+            <div class="project__icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="project__body">
+              <div class="project__tophead">
+                <div class="project__tags"><span>Cisco FTD</span><span>FMC</span><span>Multi-sites</span></div>
+                <span class="project__status project__status--study">Étude / conception</span>
+              </div>
+              <h3 class="project__title">Architecture de sécurité centralisée Cisco FTD/FMC</h3>
+              <p class="project__desc">Conception d'une architecture de sécurité réseau évolutive multi-sites, passant d'une gestion ACL difficile à maintenir vers un pilotage centralisé via un Firewall Management Center.</p>
+              <button type="button" class="project__more">Voir le détail <i class="fa-solid fa-chevron-down"></i></button>
+              <div class="project__details">
+                <ul class="project__points">
+                  <li><i class="fa-solid fa-check"></i> Centralisation des politiques de sécurité pour plusieurs sites via un FMC unique</li>
+                  <li><i class="fa-solid fa-check"></i> Objectif de scalabilité : ajout de nouveaux sites sans ré-écrire chaque ACL localement</li>
+                  <li><i class="fa-solid fa-check"></i> Réduction du risque d'erreur humaine par rapport à une gestion ACL dispersée</li>
+                </ul>
+                <div class="project__arch">
+                  <span class="arch__node">FMC</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">FTD 1/2/3</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">Site A/B/C</span>
+                </div>
+                <p class="project__result"><i class="fa-solid fa-circle-check"></i> Approche pensée pour la scalabilité et la centralisation de la sécurité multi-sites.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-tilt data-tags="MPLS QoS Multi-VLAN Lab">
+            <div class="project__icon"><i class="fa-solid fa-network-wired"></i></div>
+            <div class="project__body">
+              <div class="project__tophead">
+                <div class="project__tags"><span>MPLS</span><span>QoS</span><span>Multi-VLAN</span></div>
+                <span class="project__status project__status--done">Terminé</span>
+              </div>
+              <h3 class="project__title">Lab QoS/MPLS &amp; Maquette réseau multi-sites</h3>
+              <p class="project__desc">Implémentation de politiques DiffServ &amp; MPLS-TE, mesure latence/débit, multi-VLAN, routage inter-VLAN (OSPF), VPN site-à-site IPsec.</p>
+              <button type="button" class="project__more">Voir le détail <i class="fa-solid fa-chevron-down"></i></button>
+              <div class="project__details">
+                <div class="project__metrics">
+                  <div class="metric"><span class="metric__val" data-count="99" data-suffix="%">0%</span><span class="metric__label">disponibilité garantie</span></div>
+                  <div class="metric"><span class="metric__val" data-count="24" data-suffix="/7">0/7</span><span class="metric__label">supervision</span></div>
+                  <div class="metric"><span class="metric__val" data-count="4" data-suffix=" VLAN">0 VLAN</span><span class="metric__label">segmentés</span></div>
+                </div>
+                <p class="project__result"><i class="fa-solid fa-circle-check"></i> Lab validé, VPN IPsec site-à-site fonctionnel avec basculement automatique.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-tilt data-tags="4G/5G EPC IMS Atoll Radio">
+            <div class="project__icon"><i class="fa-solid fa-signal"></i></div>
+            <div class="project__body">
+              <div class="project__tophead">
+                <div class="project__tags"><span>4G/5G</span><span>EPC</span><span>IMS</span><span>Atoll</span></div>
+                <span class="project__status project__status--done">Terminé</span>
+              </div>
+              <h3 class="project__title">Simulation d'un réseau mobile 4G/5G — Atoll</h3>
+              <p class="project__desc">Modélisation de l'architecture (eNodeB/gNodeB, EPC, IMS) et analyse de la qualité de service radio avec Atoll et MATLAB.</p>
+              <button type="button" class="project__more">Voir le détail <i class="fa-solid fa-chevron-down"></i></button>
+              <div class="project__details">
+                <figure class="project__chart">
+                  <svg viewBox="0 0 320 120" preserveAspectRatio="none">
+                    <defs>
+                      <linearGradient id="lrGrad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="rgba(77,159,255,0.35)"/>
+                        <stop offset="100%" stop-color="rgba(77,159,255,0)"/>
+                      </linearGradient>
+                    </defs>
+                    <polyline points="0,95 32,82 64,70 96,58 128,46 160,38 192,30 224,24 256,20 288,16 320,14" fill="none" stroke="#4d9fff" stroke-width="2" style="filter: drop-shadow(0 0 4px rgba(77,159,255,0.6));"/>
+                    <polygon points="0,95 32,82 64,70 96,58 128,46 160,38 192,30 224,24 256,20 288,16 320,14 320,120 0,120" fill="url(#lrGrad)"/>
+                  </svg>
+                  <figcaption>Couverture RSRP (dBm) — optimisation sur 11 sites pilotes.</figcaption>
+                </figure>
+                <p class="project__result"><i class="fa-solid fa-circle-check"></i> Plan de fréquences validé, couverture &gt; 95% sur zone urbaine dense.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-tilt data-tags="BIND DNS ACL Lab Segmentation">
             <div class="project__icon"><i class="fa-solid fa-server"></i></div>
             <div class="project__body">
-              <div class="project__tags"><span>Linux</span><span>DNS</span><span>Mail</span></div>
+              <div class="project__tophead">
+                <div class="project__tags"><span>BIND</span><span>DNS</span><span>ACL</span></div>
+                <span class="project__status project__status--done">Terminé</span>
+              </div>
+              <h3 class="project__title">Serveur DNS BIND à vues conditionnelles</h3>
+              <p class="project__desc">Serveur DNS avec vues différenciées par département (IT, Finance, GRH) et vue publique, combinant DNS, ACL, segmentation et contrôle d'accès.</p>
+              <button type="button" class="project__more">Voir le détail <i class="fa-solid fa-chevron-down"></i></button>
+              <div class="project__details">
+                <ul class="project__points">
+                  <li><i class="fa-solid fa-check"></i> Vues configurées : vue_it, vue_finance, vue_grh, vue_public</li>
+                  <li><i class="fa-solid fa-check"></i> Segmentation IT (10.10.10.0/27), Finance (10.10.10.32/27), GRH (10.10.10.64/27)</li>
+                  <li><i class="fa-solid fa-check"></i> Serveur BIND sur 10.10.10.130 avec ACL par vue</li>
+                </ul>
+                <div class="project__arch">
+                  <span class="arch__node">DNS BIND</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">Vues IT/Finance/GRH</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">Vue publique</span>
+                </div>
+                <p class="project__result"><i class="fa-solid fa-circle-check"></i> Résolution DNS différenciée selon l'origine de la requête, avec contrôle d'accès par service.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-tilt data-tags="FreeRADIUS LDAP Asterisk MySQL VoIP Lab">
+            <div class="project__icon"><i class="fa-solid fa-phone-volume"></i></div>
+            <div class="project__body">
+              <div class="project__tophead">
+                <div class="project__tags"><span>FreeRADIUS</span><span>LDAP</span><span>Asterisk</span><span>MySQL</span></div>
+                <span class="project__status project__status--done">Terminé</span>
+              </div>
+              <h3 class="project__title">Infrastructure VoIP — FreeRADIUS + LDAP + Asterisk</h3>
+              <p class="project__desc">Infrastructure de téléphonie combinant authentification LDAP/FreeRADIUS et communications VoIP via Asterisk, avec persistance des messages en base MySQL.</p>
+              <button type="button" class="project__more">Voir le détail <i class="fa-solid fa-chevron-down"></i></button>
+              <div class="project__details">
+                <ul class="project__points">
+                  <li><i class="fa-solid fa-check"></i> Domaine LDAP dc=esmt,dc=sn pour l'authentification centralisée</li>
+                  <li><i class="fa-solid fa-check"></i> Asterisk (versions 22.4.1 puis 20.6.0) pour la gestion des communications</li>
+                  <li><i class="fa-solid fa-check"></i> Base asterisk_messages / table pending_messages pour la gestion des messages</li>
+                </ul>
+                <div class="project__arch">
+                  <span class="arch__node">LDAP</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">FreeRADIUS</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">Asterisk</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">MySQL</span>
+                </div>
+                <p class="project__result"><i class="fa-solid fa-circle-check"></i> Authentification centralisée et gestion des communications/messages opérationnelles.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-tilt data-tags="EVE-NG GNS3 VPN Lab">
+            <div class="project__icon"><i class="fa-solid fa-diagram-project"></i></div>
+            <div class="project__body">
+              <div class="project__tophead">
+                <div class="project__tags"><span>EVE-NG</span><span>GNS3</span><span>VPN</span></div>
+                <span class="project__status project__status--done">Terminé</span>
+              </div>
+              <h3 class="project__title">Lab réseau EVE-NG / GNS3</h3>
+              <p class="project__desc">Lab GNS3/EVE-NG conséquent : configuration VPN site-à-site, équipements Cisco/Huawei, dépannage et validation de scénarios réseau d'entreprise.</p>
+              <button type="button" class="project__more">Voir le détail <i class="fa-solid fa-chevron-down"></i></button>
+              <div class="project__details">
+                <div class="project__arch">
+                  <span class="arch__node">Site A</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">VPN IPsec</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">Site B</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">Cloud</span>
+                </div>
+                <p class="project__result"><i class="fa-solid fa-circle-check"></i> Scénarios validés : OSPF, BGP, IPsec, QoS inter-VLAN.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-tilt data-tags="Linux DNS Mail Lab">
+            <div class="project__icon"><i class="fa-solid fa-server"></i></div>
+            <div class="project__body">
+              <div class="project__tophead">
+                <div class="project__tags"><span>Linux</span><span>DNS</span><span>Mail</span></div>
+                <span class="project__status project__status--done">Terminé</span>
+              </div>
               <h3 class="project__title">Déploiement serveur Linux</h3>
               <p class="project__desc">Déploiement et administration d'un serveur Linux (DNS, web, mail) en environnement virtualisé.</p>
-              <div class="project__metrics">
-                <div class="metric"><span class="metric__val" data-count="3">0</span><span class="metric__label">services déployés</span></div>
-                <div class="metric"><span class="metric__val" data-count="99" data-suffix="%">0%</span><span class="metric__label">disponibilité</span></div>
-                <div class="metric"><span class="metric__val" data-count="100" data-suffix="%">0%</span><span class="metric__label">durci</span></div>
+              <button type="button" class="project__more">Voir le détail <i class="fa-solid fa-chevron-down"></i></button>
+              <div class="project__details">
+                <div class="project__metrics">
+                  <div class="metric"><span class="metric__val" data-count="3">0</span><span class="metric__label">services déployés</span></div>
+                  <div class="metric"><span class="metric__val" data-count="99" data-suffix="%">0%</span><span class="metric__label">disponibilité</span></div>
+                  <div class="metric"><span class="metric__val" data-count="100" data-suffix="%">0%</span><span class="metric__label">durci</span></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-tilt data-tags="Power-BI Excel Access Data">
+            <div class="project__icon"><i class="fa-solid fa-chart-pie"></i></div>
+            <div class="project__body">
+              <div class="project__tophead">
+                <div class="project__tags"><span>Power BI</span><span>Excel</span><span>Access</span></div>
+                <span class="project__status project__status--progress">En apprentissage</span>
+              </div>
+              <h3 class="project__title">Data &amp; Business Intelligence — Power BI / Excel / Access</h3>
+              <p class="project__desc">Montée en compétence sur l'exploitation de données : formules Excel avancées, bases Access, tableaux de bord Power BI et intégration de l'IA dans l'analyse.</p>
+              <button type="button" class="project__more">Voir le détail <i class="fa-solid fa-chevron-down"></i></button>
+              <div class="project__details">
+                <ul class="project__points">
+                  <li><i class="fa-solid fa-check"></i> Construction de tableaux de bord et de rapports visuels sous Power BI</li>
+                  <li><i class="fa-solid fa-check"></i> Modélisation de données et requêtes sous Access, formules avancées Excel</li>
+                  <li><i class="fa-solid fa-check"></i> Objectif : renforcer le pilotage data-driven de la QoS et des KPI réseau</li>
+                </ul>
+                <div class="project__arch">
+                  <span class="arch__node">Data</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">Analyse</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">Visualisation</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">Décision</span>
+                </div>
+                <p class="project__result"><i class="fa-solid fa-circle-check"></i> Compétence complémentaire à ma pratique NOC/QoS, orientée reporting et aide à la décision.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-tilt data-tags="HTML JavaScript MediaStream WebRTC Lab">
+            <div class="project__icon"><i class="fa-solid fa-video"></i></div>
+            <div class="project__body">
+              <div class="project__tophead">
+                <div class="project__tags"><span>HTML</span><span>JavaScript</span><span>MediaStream API</span></div>
+                <span class="project__status project__status--done">Terminé</span>
+              </div>
+              <h3 class="project__title">Application web multimédia — capture audio/vidéo navigateur</h3>
+              <p class="project__desc">Application web exploitant les API multimédia du navigateur pour la capture webcam/micro, l'enregistrement et le traitement audio/vidéo côté client.</p>
+              <button type="button" class="project__more">Voir le détail <i class="fa-solid fa-chevron-down"></i></button>
+              <div class="project__details">
+                <ul class="project__points">
+                  <li><i class="fa-solid fa-check"></i> Capture vidéo/audio via les API navigateur (MediaStream)</li>
+                  <li><i class="fa-solid fa-check"></i> Enregistrement et traitement côté client, sans backend dédié</li>
+                  <li><i class="fa-solid fa-check"></i> Projet rattaché à mon domaine Réseaux &amp; Multimédia (ESMT)</li>
+                </ul>
+                <p class="project__result"><i class="fa-solid fa-circle-check"></i> Base réutilisable pour des projets de communication temps réel (webRTC, visioconférence).</p>
               </div>
             </div>
           </article>
@@ -858,6 +1076,7 @@
           <div class="contact__links">
             <a href="mailto:abdoul.ali.etu@esmt.sn" class="contact__link"><i class="fa-solid fa-envelope"></i><span>abdoul.ali.etu@esmt.sn</span><i class="fa-solid fa-copy contact__copy" data-copy="abdoul.ali.etu@esmt.sn"></i></a>
             <a href="https://linkedin.com/in/daouda-ali-abdoul-latifou" target="_blank" rel="noopener" class="contact__link"><i class="fa-brands fa-linkedin"></i><span>linkedin.com/in/daouda-ali-abdoul-latifou</span></a>
+            <a href="https://wa.me/221787150911?text=Bonjour%20Abdoul%2C%20je%20vous%20contacte%20depuis%20votre%20portfolio." target="_blank" rel="noopener" class="contact__link contact__link--whatsapp"><i class="fa-brands fa-whatsapp"></i><span>Discuter sur WhatsApp</span></a>
             <a href="tel:+221787150911" class="contact__link"><i class="fa-solid fa-phone"></i><span>+221 78 715 09 11</span><i class="fa-solid fa-copy contact__copy" data-copy="+221787150911"></i></a>
             <a href="assets/CV_Daouda_Ali.pdf" download="CV-Daouda-Ali.pdf" class="contact__link"><i class="fa-solid fa-file-arrow-down"></i><span>Télécharger mon CV</span></a>
           </div>
@@ -873,6 +1092,7 @@
     </div>
   </footer>
 
+  <a href="https://wa.me/221787150911?text=Bonjour%20Abdoul%2C%20je%20vous%20contacte%20depuis%20votre%20portfolio." target="_blank" rel="noopener" class="whatsapp-fab" aria-label="Me contacter sur WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
   <button type="button" class="back-to-top" id="backToTop" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i></button>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
