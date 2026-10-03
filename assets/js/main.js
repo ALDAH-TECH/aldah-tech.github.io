@@ -212,9 +212,9 @@ const shellInput = document.getElementById('shellInput');
 const shellBody = document.getElementById('shellBody');
 const commands = {
   help: 'Commandes : <strong>help</strong>, <strong>profil</strong>, <strong>competences</strong>, <strong>experience</strong>, <strong>ftth</strong>, <strong>5g</strong>, <strong>contact</strong>, <strong>clear</strong>',
-  profil: 'Ingénieur Support FAI chez ALTEN Sénégal, spécialisé en FTTH, QoS et supervision NOC.',
-  competences: 'FTTH/GPON, QoS, CPE, MPLS/OSPF/BGP, ACL, 5G SA (Open5GS), Suricata, NOC, NMS, CnMaestro, GNS3/EVE-NG.',
-  experience: 'ALTEN (fév 2026-), T.M.C Niger / Airtel B2B (2023-2024), RAINBOW Sarl (2022).',
+  profil: 'Technicien support FAI chez ALTEN (Bouygues Telecom) et étudiant en Master 2 Télécoms et Multimédia (ESMT) : FTTH, QoS, supervision NOC.',
+  competences: 'FTTH/GPON, QoS, MPLS/OSPF/BGP, ACL, 5G SA (Open5GS, UERANSIM), Suricata, OVS/Ryu, Grafana, GNS3/EVE-NG, Python, React, AWS Cloud Foundations.',
+  experience: 'ALTEN (fév 2026-), Airtel via T.M.C (2023-2024), Airtel via RAINBOW Sarl (2022).',
   ftth: 'Architecture FTTH : NRO → OLT → PM → Splitter 1:32 → PBO → PTO → CPE. Supervision QoS 24/7.',
   '5g': 'Cœur 5G SA (Open5GS) : AMF, SMF, UPF, UDM, AUSF, NSSF. Détection d\'attaques via Suricata + blocage SDN.',
   contact: 'Email : abdoul.ali.etu@esmt.sn | Tél : +221 78 715 09 11 | Dakar, Sénégal',
