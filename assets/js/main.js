@@ -212,7 +212,7 @@ const shellInput = document.getElementById('shellInput');
 const shellBody = document.getElementById('shellBody');
 const commands = {
   help: 'Commandes : <strong>help</strong>, <strong>profil</strong>, <strong>competences</strong>, <strong>experience</strong>, <strong>ftth</strong>, <strong>5g</strong>, <strong>contact</strong>, <strong>clear</strong>',
-  profil: 'Technicien support FAI chez ALTEN (Bouygues Telecom) et étudiant en Master 2 Télécoms et Multimédia (ESMT) : FTTH, QoS, supervision NOC.',
+  profil: 'Ingénieur Télécoms et Réseaux, avec une expérience en support FAI chez ALTEN (Bouygues Telecom) : FTTH, QoS, supervision NOC.',
   competences: 'FTTH/GPON, QoS, MPLS/OSPF/BGP, ACL, 5G SA (Open5GS, UERANSIM), Suricata, OVS/Ryu, Grafana, GNS3/EVE-NG, Python, React, AWS Cloud Foundations.',
   experience: 'ALTEN (fév 2026-), Airtel via T.M.C (2023-2024), Airtel via RAINBOW Sarl (2022).',
   ftth: 'Architecture FTTH : NRO → OLT → PM → Splitter 1:32 → PBO → PTO → CPE. Supervision QoS 24/7.',

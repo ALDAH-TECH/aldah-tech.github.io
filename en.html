@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#020617" />
+  <title>DAOUDA ALI Abdoul Latifou — Telecommunications & Networks | FTTH, QoS, 5G, NOC</title>
+  <meta name="description" content="DAOUDA ALI Abdoul Latifou, Telecommunications and Networks Engineer in Dakar. FTTH, QoS, NOC, 5G, security, cloud and class projects.">
+  <meta name="keywords" content="Daouda Ali, Télécoms, Réseaux, FTTH, GPON, QoS, ALTEN, ESMT, Dakar, NOC, Airtel, ACL, Cisco, 5G, Open5GS, Suricata, SDN" />
+  <meta name="author" content="DAOUDA ALI Abdoul Latifou" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://aldah-tech.github.io/en.html" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="DAOUDA ALI Abdoul Latifou — Telecommunications & Networks (FTTH, QoS, 5G)" />
+  <meta property="og:description" content="Telecommunications and Networks Engineer. FTTH, QoS, NOC, 5G, cloud and cybersecurity.">
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:site_name" content="DAOUDA ALI — Portfolio" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="DAOUDA ALI Abdoul Latifou — Telecommunications & Networks (FTTH, QoS, 5G)" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "DAOUDA ALI Abdoul Latifou",
+      "jobTitle": "Telecommunications and Networks Engineer",
+      "description": "Telecommunications and Networks Engineer specializing in FTTH, QoS, NOC monitoring and 5G/SDN labs.",
+      "email": "mailto:abdoul.ali.etu@esmt.sn",
+      "telephone": "+221787150911",
+      "address": { "@type": "PostalAddress", "addressLocality": "Dakar", "addressCountry": "SN" },
+      "worksFor": { "@type": "Organization", "name": "ALTEN Sénégal" },
+      "alumniOf": { "@type": "CollegeOrUniversity", "name": "ESMT — École Supérieure Multinationale des Télécommunications" }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+<style>
+.language-switch{display:inline-flex;align-items:center;gap:7px;padding:5px;border:1px solid #cbd5e1;border-radius:15px;background:#f3f5f9;flex-shrink:0;font:800 14px Inter,sans-serif}
+.language-switch a{display:block;padding:10px 12px;border-radius:10px;text-decoration:none;color:#1e3a5f}.language-switch a[aria-current="page"]{background:#1e3a5f;color:white}.language-switch span{color:#64748b}
+.class-labs{margin:48px 0 28px}.class-labs p{max-width:760px;color:var(--text-muted,#a8b2d1);line-height:1.8}
+.class-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:24px}
+.class-project{border:1px solid rgba(148,163,184,.25);border-radius:18px;overflow:hidden;background:var(--bg-card,#0f172a);min-width:0}
+.class-project summary{cursor:pointer;list-style:none}.class-project summary::-webkit-details-marker{display:none}
+.class-cover{width:100%;height:240px;object-fit:contain;display:block;background:#e9eef4}
+.class-copy{padding:24px}.class-copy h3{font-size:1.2rem;line-height:1.4;margin:12px 0}.class-copy p,.class-detail p{line-height:1.75;color:var(--text-muted,#a8b2d1)}
+.class-label{font:600 11px Inter,sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#7dd3fc}
+.class-tags{display:flex;flex-wrap:wrap;gap:7px;margin:16px 0}.class-tags span{font-size:11px;padding:5px 8px;border-radius:6px;background:rgba(77,159,255,.12);color:#93c5fd}
+.class-action{color:#93c5fd;font-weight:600;display:block;margin-top:18px}.class-project[open] .class-action::after{content:" −"}.class-project:not([open]) .class-action::after{content:" +"}
+.class-detail{padding:0 24px 24px}.class-detail figure{margin:24px 0 0}.class-detail img{width:100%;height:auto;border-radius:8px;background:white}.class-detail figcaption{font-size:12px;color:#a8b2d1;margin-top:8px}
+.class-source{font-size:12px;margin-top:20px;color:#a8b2d1}.class-source a{color:#93c5fd}
+@media(max-width:767px){.class-gallery{grid-template-columns:1fr}.class-cover{height:210px}.language-switch{gap:4px;padding:3px}.language-switch a{padding:8px}.nav__inner{gap:8px}.nav__logo-text{font-size:12px}}
+</style><link rel="alternate" hreflang="fr" href="https://aldah-tech.github.io/"><link rel="alternate" hreflang="en" href="https://aldah-tech.github.io/en.html"></head>
+<body>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="#home" class="nav__logo">
+        <span class="nav__logo-mark">D</span>
+        <span class="nav__logo-text">DAOUDA ALI</span>
+      </a>
+      <nav class="nav__menu" id="navMenu" aria-label="Main navigation">
+        <a href="#home" class="nav__link">Home</a>
+        <a href="#profil" class="nav__link">Profile</a>
+        <div class="nav__dropdown">
+          <button type="button" class="nav__dropdown-toggle" aria-expanded="false">Skills <i class="fa-solid fa-chevron-down"></i></button>
+          <div class="nav__dropdown-menu">
+            <a href="#competences" class="nav__dropdown-link">Overview</a>
+            <a href="#architecture" class="nav__dropdown-link">Architecture FTTH</a>
+            <a href="#arch5g" class="nav__dropdown-link">Architecture 5G</a>
+            <a href="#noc" class="nav__dropdown-link">NOC &amp; QoS</a>
+          </div>
+        </div>
+        <div class="nav__dropdown">
+          <button type="button" class="nav__dropdown-toggle" aria-expanded="false">Background <i class="fa-solid fa-chevron-down"></i></button>
+          <div class="nav__dropdown-menu">
+            <a href="#experience" class="nav__dropdown-link">Experience</a>
+            <a href="#projets" class="nav__dropdown-link">Projects</a>
+            <a href="#cas" class="nav__dropdown-link">Case studies</a>
+            <a href="#parcours" class="nav__dropdown-link">Education</a>
+          </div>
+        </div>
+        <a href="#contact" class="nav__link nav__link--cta">Contact</a>
+      </nav>
+      <div class="language-switch" role="group" aria-label="Language"><a href="index.html" lang="fr" hreflang="fr" >FR</a><span aria-hidden="true">/</span><a href="en.html" lang="en" hreflang="en" aria-current="page">EN</a></div><button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="nav__overlay" id="navOverlay" aria-hidden="true"></div>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero__bg" aria-hidden="true">
+        <canvas class="hero__canvas" id="particleCanvas"></canvas>
+        <span class="hero__grid"></span>
+        <span class="hero__orb hero__orb--1"></span>
+        <span class="hero__orb hero__orb--2"></span>
+        <span class="hero__orb hero__orb--3"></span>
+      </div>
+      <div class="hero__inner container">
+        <div class="hero__content">
+          <div class="hero__badge reveal">Telecommunications & Networks Engineer · Dakar</div>
+          <h1 class="hero__title reveal">
+            DAOUDA ALI<br />
+            <span class="hero__title-accent">Abdoul Latifou</span>
+          </h1>
+          <p class="hero__role reveal">Telecommunications & Networks Engineer · FTTH, QoS &amp; NOC Monitoring</p>
+          <p class="hero__tagline reveal">Applying network analysis and performance management to projects with an impact in Africa.</p>
+          <p class="hero__desc reveal">
+            Experience in network operations, QoS monitoring and FTTH quality assurance, with a strong grounding in reporting, dashboards and KPI analysis. 5G/SDN labs built with Open5GS, UERANSIM, Suricata and Grafana.
+          </p>
+          <div class="hero__actions reveal">
+            <a href="#contact" class="btn btn--primary">Contact me <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#projets" class="btn btn--ghost"><i class="fa-solid fa-code"></i> View my projects</a>
+            <a href="assets/CV_Daouda_Ali.pdf" class="btn btn--ghost" download="CV-Daouda-Ali-Telecoms.pdf"><i class="fa-solid fa-download"></i> CV</a>
+          </div>
+          <div class="hero__meta reveal">
+            <button type="button" class="hero__meta-copy" data-copy="+221787150911"><i class="fa-solid fa-location-dot"></i> Grand Dakar, Senegal</button>
+            <a href="https://wa.me/221787150911" target="_blank" rel="noopener" class="hero__meta-whatsapp"><i class="fa-brands fa-whatsapp"></i> +221 78 715 09 11</a>
+            <a href="https://www.linkedin.com/in/daouda-aliabdoul-latifou-336469253" target="_blank" rel="noopener">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+          </div>
+        </div>
+        <div class="hero__media reveal" aria-label="Portrait">
+          <img class="hero__photo" src="assets/img/daouda.jpg" alt="Portrait of DAOUDA ALI Abdoul Latifou" onerror="this.style.display='none'" />
+        </div>
+        <div class="hero__terminal reveal">
+          <div class="terminal__bar"><span class="terminal__dot terminal__dot--red"></span><span class="terminal__dot terminal__dot--yellow"></span><span class="terminal__dot terminal__dot--green"></span><span class="terminal__title">daouda@telecom: ~ — NOC shell</span></div>
+          <div class="terminal__body terminal__body--shell" id="shellBody" aria-live="polite">
+            <p class="t-line"><span class="t-prompt">visitor@portfolio:~$</span> <span class="t-typed">help</span></p>
+            <p class="t-out t-out--block">
+              Welcome to the interactive NOC.<br>
+              Type <strong>help</strong> to explore the commands (profil, competences, experience, ftth, 5g, contact, clear).
+            </p>
+            <p class="t-line t-blink"><span class="t-prompt">visitor@portfolio:~$</span> <span class="t-cursor">▋</span></p>
+          </div>
+          <form class="shell__form" id="shellForm" autocomplete="off">
+            <span class="t-prompt">visitor@portfolio:~$</span>
+            <input type="text" class="shell__input" id="shellInput" placeholder="help" spellcheck="false" autocomplete="off" inputmode="text" enterkeyhint="send" />
+          </form>
+          <div class="shell__quick" id="shellQuick" aria-hidden="true">
+            <button type="button" data-cmd="profil">profil</button>
+            <button type="button" data-cmd="competences">competences</button>
+            <button type="button" data-cmd="ftth">ftth</button>
+            <button type="button" data-cmd="5g">5g</button>
+            <button type="button" data-cmd="contact">contact</button>
+            <button type="button" data-cmd="clear">clear</button>
+          </div>
+        </div>
+        <a href="#profil" class="hero__scroll" aria-label="Scroll to profile"><i class="fa-solid fa-chevron-down"></i></a>
+      </div>
+    </section>
+
+    <!-- 01 PROFIL -->
+    <section class="section" id="profil">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">01 · Profile</span>
+          <h2 class="section__title">About me</h2>
+        </div>
+        <div class="profil">
+          <div class="profil__card reveal">
+            <div class="profil__stat"><div class="profil__stat-num" data-count="4" data-suffix="">0</div><div class="profil__stat-label">years in telecommunications (since 2022)</div></div>
+            <div class="profil__stat"><div class="profil__stat-num" data-count="3">0</div><div class="profil__stat-label">operator assignments (Airtel, ALTEN)</div></div>
+            <div class="profil__stat"><div class="profil__stat-num" data-count="21">0</div><div class="profil__stat-label">telecom projects &amp; labs</div></div>
+            <div class="profil__stat"><div class="profil__stat-num" data-count="10" data-suffix="+">0</div><div class="profil__stat-label">technologies</div></div>
+          </div>
+          <div class="profil__text reveal">
+            <p>
+              <strong>Telecommunications &amp; Networks Engineer, trained at ESMT Dakar</strong>, I work as an
+              <strong>ISP support technician at ALTEN</strong> (Bouygues Telecom). My experience covers
+              <strong>network operations</strong>, <strong>QoS monitoring</strong> and
+              <strong>FTTH quality assurance</strong>, with a strong grounding in reporting, dashboards and KPI analysis.
+            </p>
+            <p>
+              My experience in Niger (Airtel through T.M.C and RAINBOW Sarl) spans deployment, L1/L2 support and core network KPI monitoring. My thesis focuses on
+              <strong>virtualized network function security and capacity planning in 5G networks (SDN/NFV)</strong>, with labs built using Open5GS, UERANSIM, Suricata and Grafana.
+            </p>
+            <div class="profil__chips">
+              <span class="chip"><i class="fa-solid fa-network-wired"></i> FTTH / GPON</span>
+              <span class="chip"><i class="fa-solid fa-chart-line"></i> QoS</span>
+              <span class="chip"><i class="fa-solid fa-tower-cell"></i> 5G SA</span>
+              <span class="chip"><i class="fa-solid fa-headset"></i> NOC</span>
+              <span class="chip"><i class="fa-brands fa-aws"></i> AWS Cloud</span>
+              <span class="chip"><i class="fa-solid fa-certificate"></i> CCNA (in preparation)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 COMPÉTENCES -->
+    <section class="section section--alt" id="competences">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">02 · Skills</span>
+          <h2 class="section__title">My telecommunications expertise</h2>
+        </div>
+        <div class="skills">
+          <article class="skill reveal">
+            <div class="skill__icon"><i class="fa-solid fa-tower-cell"></i></div>
+            <h3 class="skill__title">Telecommunications &amp; Fiber Access</h3>
+            <div class="skill__bars">
+              <div class="bar"><span class="bar__label"><i class="fa-solid fa-network-wired"></i> FTTH, GPON, PM/PBO/PTO, xDSL</span><span class="bar__pct">90%</span><div class="bar__track"><span class="bar__fill" data-width="90"></span></div></div>
+              <div class="bar"><span class="bar__label"><i class="fa-solid fa-wave-square"></i> Microwave, SDH, DWDM transmission</span><span class="bar__pct">70%</span><div class="bar__track"><span class="bar__fill" data-width="70"></span></div></div>
+              <div class="bar"><span class="bar__label"><i class="fa-solid fa-chart-line"></i> Radio &amp; core network KPIs</span><span class="bar__pct">90%</span><div class="bar__track"><span class="bar__fill" data-width="90"></span></div></div>
+            </div>
+          </article>
+          <article class="skill reveal">
+            <div class="skill__icon"><i class="fa-solid fa-tower-broadcast"></i></div>
+            <h3 class="skill__title">Core &amp; Mobile Networks</h3>
+            <div class="skill__bars">
+              <div class="bar"><span class="bar__label"><i class="fa-solid fa-microchip"></i> MSC, HSS, MGW, STP, IMS, EPC</span><span class="bar__pct">75%</span><div class="bar__track"><span class="bar__fill" data-width="75"></span></div></div>
+              <div class="bar"><span class="bar__label"><i class="fa-solid fa-signal"></i> VoLTE, 2G/3G/4G/5G-NSA/SA</span><span class="bar__pct">75%</span><div class="bar__track"><span class="bar__fill" data-width="75"></span></div></div>
+              <div class="bar"><span class="bar__label"><i class="fa-solid fa-right-left"></i> SS7 / Diameter signaling</span><span class="bar__pct">70%</span><div class="bar__track"><span class="bar__fill" data-width="70"></span></div></div>
+            </div>
+          </article>
+          <article class="skill reveal">
+            <div class="skill__icon"><i class="fa-solid fa-network-wired"></i></div>
+            <h3 class="skill__title">TCP/IP Networks &amp; Routing</h3>
+            <div class="skill__bars">
+              <div class="bar"><span class="bar__label"><i class="fa-solid fa-layer-group"></i> VLANs &amp; subnets</span><span class="bar__pct">90%</span><div class="bar__track"><span class="bar__fill" data-width="90"></span></div></div>
+              <div class="bar"><span class="bar__label"><i class="fa-solid fa-route"></i> MPLS, OSPF, BGP</span><span class="bar__pct">85%</span><div class="bar__track"><span class="bar__fill" data-width="85"></span></div></div>
+              <div class="bar"><span class="bar__label"><i class="fa-solid fa-lock"></i> VPN, NAT, ACL</span><span class="bar__pct">90%</span><div class="bar__track"><span class="bar__fill" data-width="90"></span></div></div>
+            </div>
+          </article>
+          <article class="skill reveal">
+            <div class="skill__icon"><i class="fa-solid fa-headset"></i></div>
+            <h3 class="skill__title">NOC &amp; Operations</h3>
+            <div class="skill__bars">
+              <div class="bar"><span class="bar__label"><i class="fa-solid fa-eye"></i> Real-time monitoring · NMS · CnMaestro</span><span class="bar__pct">90%</span><div class="bar__track"><span class="bar__fill" data-width="90"></span></div></div>
+              <div class="bar"><span class="bar__label"><i class="fa-solid fa-bug"></i> L1/L2/L3 incidents · On-call support</span><span class="bar__pct">85%</span><div class="bar__track"><span class="bar__fill" data-width="85"></span></div></div>
+              <div class="bar"><span class="bar__label"><i class="fa-solid fa-file-contract"></i> SLAs &amp; reporting</span><span class="bar__pct">85%</span><div class="bar__track"><span class="bar__fill" data-width="85"></span></div></div>
+            </div>
+          </article>
+          <article class="skill reveal">
+            <div class="skill__icon"><i class="fa-solid fa-toolbox"></i></div>
+            <h3 class="skill__title">Network Tools &amp; Labs</h3>
+            <div class="skill__bars">
+              <div class="bar"><span class="bar__label"><i class="fa-solid fa-diagram-project"></i> GNS3 · EVE-NG · Packet Tracer</span><span class="bar__pct">90%</span><div class="bar__track"><span class="bar__fill" data-width="90"></span></div></div>
+              <div class="bar"><span class="bar__label"><i class="fa-solid fa-magnifying-glass"></i> Wireshark · Atoll · MATLAB</span><span class="bar__pct">85%</span><div class="bar__track"><span class="bar__fill" data-width="85"></span></div></div>
+              <div class="bar"><span class="bar__label"><i class="fa-solid fa-server"></i> Cisco &amp; Huawei (production)</span><span class="bar__pct">85%</span><div class="bar__track"><span class="bar__fill" data-width="85"></span></div></div>
+            </div>
+          </article>
+          <article class="skill reveal">
+            <div class="skill__icon"><i class="fa-solid fa-brain"></i></div>
+            <h3 class="skill__title">Professional skills</h3>
+            <div class="skill__bars">
+              <div class="bar"><span class="bar__label"><i class="fa-solid fa-magnifying-glass"></i> Analytical thinking &amp; synthesis</span><span class="bar__pct">90%</span><div class="bar__track"><span class="bar__fill" data-width="90"></span></div></div>
+              <div class="bar"><span class="bar__label"><i class="fa-solid fa-bolt"></i> Responsiveness &amp; initiative</span><span class="bar__pct">95%</span><div class="bar__track"><span class="bar__fill" data-width="95"></span></div></div>
+              <div class="bar"><span class="bar__label"><i class="fa-solid fa-clock"></i> Reliability &amp; punctuality</span><span class="bar__pct">100%</span><div class="bar__track"><span class="bar__fill" data-width="100"></span></div></div>
+            </div>
+          </article>
+          <article class="skill reveal">
+            <div class="skill__icon"><i class="fa-solid fa-shield-virus"></i></div>
+            <h3 class="skill__title">5G, SDN/NFV &amp; Security</h3>
+            <div class="profil__chips">
+              <span class="chip">Open5GS</span><span class="chip">UERANSIM</span><span class="chip">Open vSwitch</span><span class="chip">Ryu</span>
+              <span class="chip">NGAP</span><span class="chip">PFCP</span><span class="chip">GTP-U</span>
+              <span class="chip">Suricata IDS</span><span class="chip">Traffic analysis</span><span class="chip">Flood detection</span><span class="chip">ACL</span><span class="chip">Segmentation</span>
+            </div>
+          </article>
+          <article class="skill reveal">
+            <div class="skill__icon"><i class="fa-solid fa-cloud"></i></div>
+            <h3 class="skill__title">Cloud, Development &amp; Office Tools</h3>
+            <div class="profil__chips">
+              <span class="chip">AWS Cloud Foundations (badge)</span><span class="chip">Docker &amp; Kubernetes (personal labs)</span>
+              <span class="chip">Python</span><span class="chip">JavaScript</span><span class="chip">React</span><span class="chip">Cytoscape.js</span><span class="chip">SQL</span><span class="chip">Git</span><span class="chip">REST</span>
+              <span class="chip">Word</span><span class="chip">Excel</span><span class="chip">PowerPoint</span><span class="chip">SAP</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="radar reveal">
+          <div class="radar__head"><h3 class="sub-title"><i class="fa-solid fa-chart-pie"></i> Skills radar</h3></div>
+          <div class="radar__wrap">
+            <canvas id="radarChart" width="520" height="420"></canvas>
+            <ul class="radar__legend" id="radarLegend">
+              <li data-idx="0"><span class="legend-dot" style="--c:#ff5252"></span> FTTH &amp; Fiber</li>
+              <li data-idx="1"><span class="legend-dot" style="--c:#4d9fff"></span> 5G Core &amp; Mobile</li>
+              <li data-idx="2"><span class="legend-dot" style="--c:#ff8a5c"></span> Monitoring &amp; QoS</li>
+              <li data-idx="3"><span class="legend-dot" style="--c:#ffd166"></span> Networks &amp; Security</li>
+              <li data-idx="4"><span class="legend-dot" style="--c:#3ddc97"></span> Systems &amp; Administration</li>
+              <li data-idx="5"><span class="legend-dot" style="--c:#b388ff"></span> Tools &amp; Labs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 ARCHITECTURE FTTH -->
+    <section class="section" id="architecture">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">03 · Architecture</span>
+          <h2 class="section__title">FTTH architecture — from the central office to the customer</h2>
+          <p class="section__sub">Operator stack: OLT, optical splitters, distribution and termination points, CPE and end-to-end QoS monitoring. Tap a device for details.</p>
+        </div>
+
+        <div class="arch reveal" id="archDiagram">
+          <div class="arch__flow" aria-hidden="true">
+            <div class="arch__flowline arch__flowline--1"></div>
+            <div class="arch__flowline arch__flowline--2"></div>
+            <div class="arch__flowline arch__flowline--3"></div>
+          </div>
+          <div class="arch__lane">
+            <div class="arch__lane-label"><span>Operator core</span></div>
+            <div class="arch__nodes">
+              <div class="arch__node" tabindex="0"><i class="fa-solid fa-server"></i><span>NRO</span><small>Optical central office</small></div>
+              <div class="arch__node" tabindex="0"><i class="fa-solid fa-network-wired"></i><span>OLT</span><small>Optical Line Terminal · GPON</small></div>
+            </div>
+          </div>
+          <div class="arch__lane">
+            <div class="arch__lane-label"><span>Distribution</span></div>
+            <div class="arch__nodes">
+              <div class="arch__node" tabindex="0"><i class="fa-solid fa-diagram-project"></i><span>PM</span><small>Fiber distribution point</small></div>
+              <div class="arch__node" tabindex="0"><i class="fa-solid fa-bolt"></i><span>Splitter</span><small>1:32 · 1:64</small></div>
+              <div class="arch__node" tabindex="0"><i class="fa-solid fa-box"></i><span>PBO</span><small>Optical distribution box</small></div>
+            </div>
+          </div>
+          <div class="arch__lane">
+            <div class="arch__lane-label"><span>Customer connection</span></div>
+            <div class="arch__nodes">
+              <div class="arch__node" tabindex="0"><i class="fa-solid fa-plug"></i><span>PTO</span><small>Optical termination outlet</small></div>
+              <div class="arch__node" tabindex="0"><i class="fa-solid fa-wifi"></i><span>CPE / ONT</span><small>Customer router · WiFi 6</small></div>
+              <div class="arch__node" tabindex="0"><i class="fa-solid fa-desktop"></i><span>Customer LAN</span><small>PC, smartphone, IoT</small></div>
+            </div>
+          </div>
+          <div class="arch__lane">
+            <div class="arch__lane-label"><span>Monitoring</span></div>
+            <div class="arch__nodes">
+              <div class="arch__node" tabindex="0"><i class="fa-solid fa-eye"></i><span>NMS</span><small>Network Management System</small></div>
+              <div class="arch__node" tabindex="0"><i class="fa-solid fa-chart-line"></i><span>KPI</span><small>CSSR · CDR · Latency</small></div>
+              <div class="arch__node" tabindex="0"><i class="fa-solid fa-bell"></i><span>Alerts</span><small>SLA · On-call support</small></div>
+            </div>
+          </div>
+          <div class="arch__bar">
+            <div class="arch__bar-item"><i class="fa-solid fa-shield-halved"></i> Quality assurance · Compliant distribution and termination points</div>
+            <div class="arch__bar-item"><i class="fa-solid fa-arrows-rotate"></i> Weekly reporting · ARTP Niger / Senegal</div>
+            <div class="arch__bar-item"><i class="fa-solid fa-satellite-dish"></i> 24/7 monitoring · CnMaestro, Huawei NMS</div>
+          </div>
+        </div>
+
+        <div class="arch__ops reveal">
+          <button class="btn btn--ghost" id="archDeploy"><i class="fa-solid fa-rocket"></i> Simulate a customer connection</button>
+          <div class="arch__log" id="archLog" role="log" aria-live="polite">
+            <p class="arch__log-line">[NRO] OLT Huawei MA5800 — port GPON 0/1/0 ✓</p>
+            <p class="arch__log-line">[Distribution] Splitter 1:32, optical loss 17.2 dB ✓</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 ARCHITECTURE 5G SA -->
+    <section class="section section--alt" id="arch5g">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">04 · Architecture 5G</span>
+          <h2 class="section__title">5G SA architecture — tap each device</h2>
+          <p class="section__sub">Standalone 5G core based on my Open5GS lab: from the UE to the Data Network, including reference interfaces (N1–N6, N8–N13, N17, N20–N22, N29).</p>
+        </div>
+
+        <div class="netmap netmap--5g reveal" id="netmap5g">
+          <div class="netmap__zone">
+            <div class="netmap__zone-title">User</div>
+            <div class="netmap__node" tabindex="0" data-role="UE (IMSI)" data-desc="User Equipment: smartphone with a SIM (IMSI) registering on the 5G network. N1 NAS signaling and N2 through the gNB.">
+              <i class="fa-solid fa-mobile-screen-button"></i><span>UE</span><small>N1 · N2</small>
+            </div>
+          </div>
+
+          <div class="netmap__conn"><span class="netmap__flow"></span></div>
+
+          <div class="netmap__zone">
+            <div class="netmap__zone-title">Radio access (RAN)</div>
+            <div class="netmap__node" tabindex="0" data-role="gNodeB (gNB)" data-desc="5G radio base station connecting the UE to the core. NGAP signaling (N2) and GTP-U user traffic (N3).">
+              <i class="fa-solid fa-tower-cell"></i><span>gNB</span><small>N2 · N3</small>
+            </div>
+          </div>
+
+          <div class="netmap__conn"><span class="netmap__flow"></span></div>
+
+          <div class="netmap__zone netmap__zone--core">
+            <div class="netmap__zone-title">5G Core — Service Based Architecture</div>
+            <div class="netmap__nodes-grid">
+              <div class="netmap__node" tabindex="0" data-role="AMF" data-desc="Access & Mobility Management Function: registration, mobility and connection management. Interfaces N1, N2, N8, N12, N22."><i class="fa-solid fa-right-to-bracket"></i><span>AMF</span></div>
+              <div class="netmap__node" tabindex="0" data-role="SMF" data-desc="Session Management Function: creates PDU sessions, allocates IP addresses and controls the UPF. Interfaces N10, N11, N4."><i class="fa-solid fa-sliders"></i><span>SMF</span></div>
+              <div class="netmap__node" tabindex="0" data-role="UPF" data-desc="User Plane Function: GTP-U encapsulation and packet routing to the Data Network. Interfaces N3, N4, N6."><i class="fa-solid fa-arrows-turn-to-dots"></i><span>UPF</span></div>
+              <div class="netmap__node" tabindex="0" data-role="UDM" data-desc="Unified Data Management: subscription data, key generation and subscriber service profiles. Interfaces N8, N10, N13, N21."><i class="fa-solid fa-id-card"></i><span>UDM</span></div>
+              <div class="netmap__node" tabindex="0" data-role="AUSF" data-desc="Authentication Server Function: authenticates the UE (SIM/IMSI) and provides security keys to the AMF. Interfaces N12, N13."><i class="fa-solid fa-user-shield"></i><span>AUSF</span></div>
+              <div class="netmap__node" tabindex="0" data-role="NSSF" data-desc="Network Slice Selection Function: selects the network slice for the requested service. Interface N22."><i class="fa-solid fa-layer-group"></i><span>NSSF</span></div>
+              <div class="netmap__node" tabindex="0" data-role="SMSF" data-desc="SMS Function: SMS over NAS through the 5G core. Interfaces N11, N20, N21."><i class="fa-solid fa-comment-sms"></i><span>SMSF</span></div>
+              <div class="netmap__node" tabindex="0" data-role="NEF" data-desc="Network Exposure Function: securely exposes network capabilities to external applications. Interface N29."><i class="fa-solid fa-share-nodes"></i><span>NEF</span></div>
+              <div class="netmap__node" tabindex="0" data-role="EIR" data-desc="Equipment Identity Register: checks device IMEI against allow/block lists. Interface N17."><i class="fa-solid fa-fingerprint"></i><span>EIR</span></div>
+            </div>
+          </div>
+
+          <div class="netmap__conn"><span class="netmap__flow"></span></div>
+
+          <div class="netmap__zone">
+            <div class="netmap__zone-title">Services &amp; Data</div>
+            <div class="netmap__node" tabindex="0" data-role="IMS Core" data-desc="IMS core: voice (VoLTE / VoNR) and multimedia services, connected to UDM and UPF through Sh / Cx / Rx."><i class="fa-solid fa-cloud"></i><span>IMS</span><small>Sh · Cx · Rx</small></div>
+            <div class="netmap__node" tabindex="0" data-role="Data Network" data-desc="Data Network: Internet or operator services available to the subscriber through the UPF (N6)."><i class="fa-solid fa-globe"></i><span>DN</span><small>N6</small></div>
+          </div>
+
+          <div class="netmap__tooltip" id="netmapTooltip5g">Tap a device to see its role</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 NOC -->
+    <section class="section" id="noc">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">05 · NOC</span>
+          <h2 class="section__title">Network Operations Center (NOC)</h2>
+          <p class="section__sub">Real-time fiber quality KPI monitoring and proactive anomaly detection.</p>
+        </div>
+
+        <div class="soc reveal" id="socDashboard">
+          <div class="soc__top">
+            <div class="soc__status"><span class="soc__pulse"></span> <span id="socClock">--:--:--</span> &nbsp;·&nbsp; MONITORING ACTIVE</div>
+            <div class="soc__tabs" id="socTabs">
+              <span class="soc__tab soc__tab--active" data-tab="overview">Overview</span>
+              <span class="soc__tab" data-tab="alerts">Alerts</span>
+              <span class="soc__tab" data-tab="network">Network</span>
+            </div>
+          </div>
+          <div class="soc__panel" data-panel="overview">
+            <div class="soc__grid">
+              <div class="soc__card">
+                <span class="soc__label"><i class="fa-solid fa-satellite-dish"></i> Fiber link</span>
+                <div class="soc__bar"><span class="soc__fill" data-width="98"></span></div>
+                <div class="soc__meta"><span class="soc__val">98%</span><span class="soc__hint">Optimal availability</span></div>
+              </div>
+              <div class="soc__card">
+                <span class="soc__label"><i class="fa-solid fa-gauge-high"></i> Bandwidth</span>
+                <div class="soc__bar"><span class="soc__fill soc__fill--blue" data-width="75"></span></div>
+                <div class="soc__meta"><span class="soc__val">75%</span><span class="soc__hint">B2B network load</span></div>
+              </div>
+              <div class="soc__card">
+                <span class="soc__label"><i class="fa-solid fa-tower-cell"></i> Latency</span>
+                <div class="soc__bar"><span class="soc__fill soc__fill--orange" data-width="60"></span></div>
+                <div class="soc__meta"><span class="soc__val">12 ms</span><span class="soc__hint">Excellent QoS</span></div>
+              </div>
+              <div class="soc__card">
+                <span class="soc__label"><i class="fa-solid fa-shield-halved"></i> CPE status</span>
+                <div class="soc__threat"><span class="soc__threat-badge">OK</span></div>
+                <div class="soc__meta"><span class="soc__hint">no anomalies</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="soc__panel" data-panel="alerts" hidden>
+            <ul class="soc__alertlist" id="socAlertList">
+              <li><span class="soc__alert-dot soc__alert-dot--ok"></span> No active critical alerts</li>
+              <li><span class="soc__alert-dot soc__alert-dot--warn"></span> CPE-042 · slightly higher latency (monitored)</li>
+              <li><span class="soc__alert-dot soc__alert-dot--ok"></span> 99.9% SLA met over the past 30 days</li>
+            </ul>
+          </div>
+          <div class="soc__panel" data-panel="network" hidden>
+            <div class="soc__netlist">
+              <div class="soc__netitem"><span>OLT Huawei MA5800</span><span class="soc__netstate soc__netstate--on">Online</span></div>
+              <div class="soc__netitem"><span>PM Grand Dakar #14</span><span class="soc__netstate soc__netstate--on">Online</span></div>
+              <div class="soc__netitem"><span>Mermoz B2B link</span><span class="soc__netstate soc__netstate--on">Online</span></div>
+              <div class="soc__netitem"><span>CPE-042</span><span class="soc__netstate soc__netstate--warn">Monitored</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="crypto reveal" style="margin-top: 40px;">
+          <div class="crypto__pq">
+            <h3 class="sub-title"><i class="fa-solid fa-cubes"></i> Monitored QoS parameters</h3>
+            <div class="pq-grid">
+              <div class="pq-card"><span class="pq-card__name">Latency</span><span class="pq-card__type">Ping</span><span class="pq-card__badge pq-card__badge--nist">&lt; 20ms</span></div>
+              <div class="pq-card"><span class="pq-card__name">Jitter</span><span class="pq-card__type">Jitter</span><span class="pq-card__badge pq-card__badge--nist">Low</span></div>
+              <div class="pq-card"><span class="pq-card__name">Packet Loss</span><span class="pq-card__type">Loss</span><span class="pq-card__badge pq-card__badge--safe">0.01%</span></div>
+              <div class="pq-card"><span class="pq-card__name">Throughput</span><span class="pq-card__type">Throughput</span><span class="pq-card__badge pq-card__badge--safe">Optimal</span></div>
+            </div>
+          </div>
+
+          <div class="labdemos reveal" style="margin-top: 40px;">
+            <article class="labdemo">
+              <div class="labdemo__head"><i class="fa-solid fa-tower-broadcast"></i> Latency test — customer CPE</div>
+              <p class="labdemo__desc">Simulates 10 pings to a remote CPE to measure average latency.</p>
+              <div class="labdemo__ctl">
+                <button type="button" class="ai__nn-run" id="pingRun"><i class="fa-solid fa-play"></i> Run ping</button>
+              </div>
+              <div class="labdemo__log" id="pingLog" aria-live="polite"><p class="arch__log-line">Waiting…</p></div>
+            </article>
+
+            <article class="labdemo">
+              <div class="labdemo__head"><i class="fa-solid fa-triangle-exclamation"></i> FTTH quality defect detection</div>
+              <p class="labdemo__desc">Simulates a quality audit on an optical distribution box: received optical power measurement.</p>
+              <div class="labdemo__ctl">
+                <button type="button" class="ai__nn-run" id="auditRun"><i class="fa-solid fa-magnifying-glass"></i> Audit distribution box</button>
+              </div>
+              <div class="labdemo__log" id="auditLog" aria-live="polite"><p class="arch__log-line">Waiting for audit…</p></div>
+            </article>
+
+            <article class="labdemo">
+              <div class="labdemo__head"><i class="fa-solid fa-bolt"></i> KPI alert — critical CSSR</div>
+              <p class="labdemo__desc">Generates an incident burst: the NOC detects and escalates automatically.</p>
+              <div class="labdemo__ctl">
+                <button type="button" class="ai__nn-run" id="kpiRun"><i class="fa-solid fa-bell"></i> Generate incidents</button>
+              </div>
+              <div class="labdemo__log" id="kpiLog" aria-live="polite"><p class="arch__log-line">0 incidents · 0 escalations</p></div>
+            </article>
+
+            <article class="labdemo">
+              <div class="labdemo__head"><i class="fa-solid fa-rotate-right"></i> Remote CPE restart</div>
+              <p class="labdemo__desc">Simulates a remote restart through TR-069 to restore service.</p>
+              <div class="labdemo__ctl">
+                <button type="button" class="ai__nn-run" id="rebootRun"><i class="fa-solid fa-power-off"></i> Reboot CPE</button>
+              </div>
+              <div class="labdemo__procs" id="cpeProcs">
+                <div class="proc"><span class="proc__dot proc__dot--on"></span> CPE-001 · uptime 12d 04h</div>
+                <div class="proc"><span class="proc__dot proc__dot--on"></span> CPE-042 · uptime 07d 22h</div>
+                <div class="proc"><span class="proc__dot proc__dot--on"></span> CPE-118 · uptime 02d 15h</div>
+              </div>
+              <div class="labdemo__log" id="rebootLog" aria-live="polite"><p class="arch__log-line">3/3 CPE operational ✓</p></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 EXPÉRIENCE -->
+    <section class="section section--alt" id="experience">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">06 · Experience</span>
+          <h2 class="section__title">Professional experience</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card">
+              <div class="timeline__head">
+                <h3 class="timeline__title">ISP support technician</h3>
+                <span class="timeline__date">16 Feb 2026 — Present</span>
+              </div>
+              <p class="timeline__org"><i class="fa-solid fa-building"></i> ALTEN (Bouygues Telecom) | Dakar, Senegal</p>
+              <ul class="timeline__list">
+                <li>Analyzed fiber quality KPIs, identified degradation trends and proposed corrective actions, helping maintain network availability above 98.5%.</li>
+                <li>Managed FTTH defects and non-compliance: technical incident assessment, subcontractor escalation and follow-up through closure, reducing the non-compliance rate by 1.5% (relative) within the assigned scope.</li>
+                <li>Coordinated maintenance teams and infrastructure operators to meet SLAs and network quality standards.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card">
+              <div class="timeline__head">
+                <h3 class="timeline__title">Network supervisor — Airtel</h3>
+                <span class="timeline__date">18 Oct 2023 — 30 Sep 2024</span>
+              </div>
+              <p class="timeline__org"><i class="fa-solid fa-building"></i> T.M.C Niger | Niamey, Niger</p>
+              <ul class="timeline__list">
+                <li>Monitored and analyzed core network KPIs (CSSR, CDR, throughput, latency), proactively detected anomalies and recommended optimizations to maintain CSSR above 95%.</li>
+                <li>Managed QoS through automated weekly dashboards to measure user experience and identify underperforming areas.</li>
+                <li>Regulatory compliance: prepared detailed reports for regulatory bodies (e.g. ARTP).</li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card">
+              <div class="timeline__head">
+                <h3 class="timeline__title">Field internship</h3>
+                <span class="timeline__date">20 Feb 2023 — 20 Apr 2023</span>
+              </div>
+              <p class="timeline__org"><i class="fa-solid fa-wrench"></i> Niamey, Niger</p>
+              <ul class="timeline__list">
+                <li>Visited B2B customer sites to diagnose and resolve connectivity issues.</li>
+                <li>Applied IP protocols, VLANs and basic routing.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card">
+              <div class="timeline__head">
+                <h3 class="timeline__title">Network technician — Airtel</h3>
+                <span class="timeline__date">Sep 2022 — Dec 2022</span>
+              </div>
+              <p class="timeline__org"><i class="fa-solid fa-network-wired"></i> RAINBOW Sarl | Niamey, Niger</p>
+              <ul class="timeline__list">
+                <li>Deployed and configured IP and LAN/WAN infrastructure, installing and commissioning Cisco/Huawei routers and switches in line with target architectures and security standards.</li>
+                <li>L1/L2 technical support: diagnosed and resolved connectivity incidents within SLA response times.</li>
+                <li>Reporting and continuous improvement: documented procedures, updated topologies and produced incident reports to prevent recurrence.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 PROJETS -->
+    <section class="section" id="projets">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">07 · Projects</span>
+          <h2 class="section__title">Telecommunications projects</h2>
+        </div>
+        <div class="projects__filters reveal" id="projectFilters">
+          <button type="button" class="pfilter pfilter--active" data-filter="all">All</button>
+          <button type="button" class="pfilter" data-filter="5G">5G / Core network</button>
+          <button type="button" class="pfilter" data-filter="Cisco">Security / ACL</button>
+          <button type="button" class="pfilter" data-filter="Radio">Radio &amp; Transmission</button>
+          <button type="button" class="pfilter" data-filter="Lab">Labs &amp; Infrastructure</button>
+          <button type="button" class="pfilter" data-filter="Data">Data &amp; Monitoring</button>
+        </div>
+        <div class="projects" id="projectsGrid">
+          <article class="project reveal" data-tilt data-tags="Open5GS Suricata SDN Grafana 5G">
+            <div class="project__icon"><i class="fa-solid fa-shield-virus"></i></div>
+            <div class="project__body">
+              <div class="project__tophead">
+                <div class="project__tags"><span>Open5GS</span><span>Suricata</span><span>SDN</span><span>Grafana</span></div>
+                <span class="project__status project__status--done">Completed</span>
+              </div>
+              <h3 class="project__title">Secure 5G SA core — automated detection &amp; response</h3>
+              <p class="project__desc">Multi-site deployment of an Open5GS 5G SA core on Ubuntu virtual machines, with an end-to-end attack detection and automated blocking pipeline.</p>
+              <button type="button" class="project__more">View details <i class="fa-solid fa-chevron-down"></i></button>
+              <div class="project__details">
+                <ul class="project__points">
+                  <li><i class="fa-solid fa-check"></i> Complete 5G SA core (AMF, SMF, UPF, UDM, AUSF, NSSF, NRF…) — 2 sites (Plateau, Mermoz) and 10 UEs simulated with UERANSIM</li>
+                  <li><i class="fa-solid fa-check"></i> Injected attacks (ICMP Flood, PFCP Flood N4/N8805) detected by Suricata and blocked through Open vSwitch (Ryu/SDN, DropFlow)</li>
+                  <li><i class="fa-solid fa-check"></i> Real-time Prometheus + Grafana monitoring: latency (ms), CPU/RAM, alerts &amp; events, ogstun-exporter integration</li>
+                </ul>
+                <div class="project__metrics">
+                  <div class="metric"><span class="metric__val" data-count="2">0</span><span class="metric__label">simulated 5G sites</span></div>
+                  <div class="metric"><span class="metric__val" data-count="10">0</span><span class="metric__label">simulated UEs</span></div>
+                  <div class="metric"><span class="metric__val" data-count="100" data-suffix="%">0%</span><span class="metric__label">automated blocking</span></div>
+                </div>
+                <div class="project__arch">
+                  <span class="arch__node">UERANSIM (gNB)</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">Open5GS</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">OVS/Ryu</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">Suricata</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">Prometheus/Grafana</span>
+                </div>
+                <p class="project__result"><i class="fa-solid fa-circle-check"></i> 3 validated scenarios: educational, experimental and analytical.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-tilt data-tags="React FastAPI Cytoscape.js WebSocket 5G Data PostgreSQL Docker">
+            <div class="project__icon"><i class="fa-solid fa-diagram-project"></i></div>
+            <div class="project__body">
+              <div class="project__tophead">
+                <div class="project__tags"><span>React</span><span>FastAPI</span><span>Cytoscape.js</span><span>WebSocket</span></div>
+                <span class="project__status project__status--progress">In design</span>
+              </div>
+              <h3 class="project__title">5G monitoring &amp; cybersecurity platform (NOC/SOC web)</h3>
+              <p class="project__desc">Real-time web interface showing the 5G core topology, Network Functions, security alerts and metrics, connecting my telecom, networking, security and development skills.</p>
+              <button type="button" class="project__more">View details <i class="fa-solid fa-chevron-down"></i></button>
+              <div class="project__details">
+                <ul class="project__points">
+                  <li><i class="fa-solid fa-check"></i> React + TypeScript + Cytoscape.js frontend for a dynamic network map and interactive nodes</li>
+                  <li><i class="fa-solid fa-check"></i> FastAPI backend, PostgreSQL database, Redis cache and real-time WebSocket streams</li>
+                  <li><i class="fa-solid fa-check"></i> Powered by Open5GS, Suricata, Prometheus and OVS/Ryu, containerized with Docker Compose</li>
+                </ul>
+                <div class="project__arch">
+                  <span class="arch__node">React + Cytoscape</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">FastAPI</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">PostgreSQL/Redis</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">Open5GS/Suricata</span>
+                </div>
+                <p class="project__result"><i class="fa-solid fa-circle-check"></i> NOC/SOC interface: topology, alarms, history and 5G call flows — a flagship project in my technical portfolio.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-tilt data-tags="Radio Mobile FH MPR Bilan-de-liaison">
+            <div class="project__icon"><i class="fa-solid fa-tower-broadcast"></i></div>
+            <div class="project__body">
+              <div class="project__tophead">
+                <div class="project__tags"><span>Radio Mobile</span><span>FH/MPR</span><span>1300 MHz</span></div>
+                <span class="project__status project__status--study">Academic study</span>
+              </div>
+              <h3 class="project__title">Microwave link / Radio Mobile — ESMT</h3>
+              <p class="project__desc">Study and capacity planning for a 1300 MHz microwave link connecting the ESMT main campus to two annexes (Diamniadio, Thiès), supervised by Dr. Soidridine Moussa Moindze.</p>
+              <button type="button" class="project__more">View details <i class="fa-solid fa-chevron-down"></i></button>
+              <div class="project__details">
+                <ul class="project__points">
+                  <li><i class="fa-solid fa-check"></i> Main campus → Annex 1 (Diamniadio): 26.8 km — received power -76.87 dBm — margin -3.94 dB</li>
+                  <li><i class="fa-solid fa-check"></i> Main campus → Annex 2 (Thiès): 55.157 km — received power -79.14 dBm — margin -6.20 dB</li>
+                  <li><i class="fa-solid fa-check"></i> Annex 1 → Annex 2: received power -76.09 dBm — margin -3.09 dB</li>
+                </ul>
+                <div class="project__arch">
+                  <span class="arch__node">ESMT main campus</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">Diamniadio annex</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">Thiès annex</span>
+                </div>
+                <p class="project__result"><i class="fa-solid fa-circle-check"></i> Negative margins identified; options studied: antenna height/gain, lower cable losses and intermediate relays.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-tilt data-tags="Cisco ACL Time-range Multi-LAN Lab">
+            <div class="project__icon"><i class="fa-solid fa-user-lock"></i></div>
+            <div class="project__body">
+              <div class="project__tophead">
+                <div class="project__tags"><span>Cisco</span><span>ACL</span><span>Time-range</span><span>Multi-LAN</span></div>
+                <span class="project__status project__status--done">Completed</span>
+              </div>
+              <h3 class="project__title">Multi-site security with Cisco ACLs</h3>
+              <p class="project__desc">Designed and deployed layered access control policies on a multi-LAN architecture connected through Cisco routers: who can access which service, when and where.</p>
+              <button type="button" class="project__more">View details <i class="fa-solid fa-chevron-down"></i></button>
+              <div class="project__details">
+                <ul class="project__points">
+                  <li><i class="fa-solid fa-check"></i> Application filtering: HTTP/HTTPS to the target server only; all other traffic denied</li>
+                  <li><i class="fa-solid fa-check"></i> Per-host policies (ping+SSH, ping+FTP) and time-based access control</li>
+                  <li><i class="fa-solid fa-check"></i> Secure inter-site traffic (ping and FTP only) with weekend-specific rules</li>
+                </ul>
+                <div class="project__metrics">
+                  <div class="metric"><span class="metric__val" data-count="5">0</span><span class="metric__label">deployed policies</span></div>
+                  <div class="metric"><span class="metric__val" data-count="4">0</span><span class="metric__label">segmented LANs</span></div>
+                  <div class="metric"><span class="metric__val" data-count="100" data-suffix="%">0%</span><span class="metric__label">controlled traffic flows</span></div>
+                </div>
+                <div class="project__arch">
+                  <span class="arch__node">LAN 1/2</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">Router1</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">ACL</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">Router2</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">LAN 10/20</span>
+                </div>
+                <p class="project__result"><i class="fa-solid fa-circle-check"></i> The same rigor as FTTH quality assurance at ALTEN: reliable, secure infrastructure.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-tilt data-tags="Cisco FTD FMC ACL Multi-sites">
+            <div class="project__icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="project__body">
+              <div class="project__tophead">
+                <div class="project__tags"><span>Cisco FTD</span><span>FMC</span><span>Multi-site</span></div>
+                <span class="project__status project__status--study">Study / design</span>
+              </div>
+              <h3 class="project__title">Centralized Cisco FTD/FMC security architecture</h3>
+              <p class="project__desc">Designed a scalable multi-site security architecture, moving from hard-to-maintain ACLs to centralized management through a Firewall Management Center.</p>
+              <button type="button" class="project__more">View details <i class="fa-solid fa-chevron-down"></i></button>
+              <div class="project__details">
+                <ul class="project__points">
+                  <li><i class="fa-solid fa-check"></i> Centralized security policies for multiple sites through a single FMC</li>
+                  <li><i class="fa-solid fa-check"></i> Scalability objective: add sites without rewriting each ACL locally</li>
+                  <li><i class="fa-solid fa-check"></i> Reduced risk of human error compared with distributed ACL management</li>
+                </ul>
+                <div class="project__arch">
+                  <span class="arch__node">FMC</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">FTD 1/2/3</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">Site A/B/C</span>
+                </div>
+                <p class="project__result"><i class="fa-solid fa-circle-check"></i> An approach designed for scalability and centralized multi-site security.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-tilt data-tags="MPLS QoS Multi-VLAN Lab">
+            <div class="project__icon"><i class="fa-solid fa-network-wired"></i></div>
+            <div class="project__body">
+              <div class="project__tophead">
+                <div class="project__tags"><span>MPLS</span><span>QoS</span><span>Multi-VLAN</span></div>
+                <span class="project__status project__status--done">Completed</span>
+              </div>
+              <h3 class="project__title">QoS/MPLS lab &amp; multi-site network prototype</h3>
+              <p class="project__desc">Implemented DiffServ &amp; MPLS-TE policies, latency/throughput measurements, multiple VLANs, OSPF inter-VLAN routing and site-to-site IPsec VPN.</p>
+              <button type="button" class="project__more">View details <i class="fa-solid fa-chevron-down"></i></button>
+              <div class="project__details">
+                <div class="project__metrics">
+                  <div class="metric"><span class="metric__val" data-count="99" data-suffix="%">0%</span><span class="metric__label">guaranteed availability</span></div>
+                  <div class="metric"><span class="metric__val" data-count="24" data-suffix="/7">0/7</span><span class="metric__label">monitoring</span></div>
+                  <div class="metric"><span class="metric__val" data-count="4" data-suffix=" VLAN">0 VLAN</span><span class="metric__label">segmented</span></div>
+                </div>
+                <p class="project__result"><i class="fa-solid fa-circle-check"></i> Validated lab with a working site-to-site IPsec VPN and automatic failover.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-tilt data-tags="4G/5G EPC IMS Atoll Radio">
+            <div class="project__icon"><i class="fa-solid fa-signal"></i></div>
+            <div class="project__body">
+              <div class="project__tophead">
+                <div class="project__tags"><span>4G/5G</span><span>EPC</span><span>IMS</span><span>Atoll</span></div>
+                <span class="project__status project__status--done">Completed</span>
+              </div>
+              <h3 class="project__title">4G/5G mobile network simulation — Atoll</h3>
+              <p class="project__desc">Modeled eNodeB/gNodeB, EPC and IMS architecture and analyzed radio QoS using Atoll and MATLAB.</p>
+              <button type="button" class="project__more">View details <i class="fa-solid fa-chevron-down"></i></button>
+              <div class="project__details">
+                <figure class="project__chart">
+                  <svg viewBox="0 0 320 120" preserveAspectRatio="none">
+                    <defs>
+                      <linearGradient id="lrGrad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="rgba(77,159,255,0.35)"/>
+                        <stop offset="100%" stop-color="rgba(77,159,255,0)"/>
+                      </linearGradient>
+                    </defs>
+                    <polyline points="0,95 32,82 64,70 96,58 128,46 160,38 192,30 224,24 256,20 288,16 320,14" fill="none" stroke="#4d9fff" stroke-width="2" style="filter: drop-shadow(0 0 4px rgba(77,159,255,0.6));"/>
+                    <polygon points="0,95 32,82 64,70 96,58 128,46 160,38 192,30 224,24 256,20 288,16 320,14 320,120 0,120" fill="url(#lrGrad)"/>
+                  </svg>
+                  <figcaption>RSRP coverage (dBm) — optimization across 11 pilot sites.</figcaption>
+                </figure>
+                <p class="project__result"><i class="fa-solid fa-circle-check"></i> Validated frequency plan, coverage &gt; 95% in a dense urban area.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-tilt data-tags="BIND DNS ACL Lab Segmentation">
+            <div class="project__icon"><i class="fa-solid fa-server"></i></div>
+            <div class="project__body">
+              <div class="project__tophead">
+                <div class="project__tags"><span>BIND</span><span>DNS</span><span>ACL</span></div>
+                <span class="project__status project__status--done">Completed</span>
+              </div>
+              <h3 class="project__title">BIND DNS server with conditional views</h3>
+              <p class="project__desc">DNS server with departmental views (IT, Finance, HR) and a public view, combining DNS, ACLs, segmentation and access control.</p>
+              <button type="button" class="project__more">View details <i class="fa-solid fa-chevron-down"></i></button>
+              <div class="project__details">
+                <ul class="project__points">
+                  <li><i class="fa-solid fa-check"></i> Configured views: vue_it, vue_finance, vue_grh, vue_public</li>
+                  <li><i class="fa-solid fa-check"></i> IT (10.10.10.0/27), Finance (10.10.10.32/27) and HR (10.10.10.64/27) segmentation</li>
+                  <li><i class="fa-solid fa-check"></i> BIND server at 10.10.10.130 with per-view ACLs</li>
+                </ul>
+                <div class="project__arch">
+                  <span class="arch__node">DNS BIND</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">IT/Finance/HR views</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">Public view</span>
+                </div>
+                <p class="project__result"><i class="fa-solid fa-circle-check"></i> DNS resolution based on request origin, with per-department access control.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-tilt data-tags="FreeRADIUS LDAP Asterisk MySQL VoIP Lab">
+            <div class="project__icon"><i class="fa-solid fa-phone-volume"></i></div>
+            <div class="project__body">
+              <div class="project__tophead">
+                <div class="project__tags"><span>FreeRADIUS</span><span>LDAP</span><span>Asterisk</span><span>MySQL</span></div>
+                <span class="project__status project__status--done">Completed</span>
+              </div>
+              <h3 class="project__title">VoIP infrastructure — FreeRADIUS + LDAP + Asterisk</h3>
+              <p class="project__desc">Telephony infrastructure combining LDAP/FreeRADIUS authentication and Asterisk VoIP communications, with messages stored in MySQL.</p>
+              <button type="button" class="project__more">View details <i class="fa-solid fa-chevron-down"></i></button>
+              <div class="project__details">
+                <ul class="project__points">
+                  <li><i class="fa-solid fa-check"></i> LDAP domain dc=esmt,dc=sn for centralized authentication</li>
+                  <li><i class="fa-solid fa-check"></i> Asterisk (versions 22.4.1 then 20.6.0) for communication management</li>
+                  <li><i class="fa-solid fa-check"></i> asterisk_messages database / pending_messages table for message management</li>
+                </ul>
+                <div class="project__arch">
+                  <span class="arch__node">LDAP</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">FreeRADIUS</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">Asterisk</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">MySQL</span>
+                </div>
+                <p class="project__result"><i class="fa-solid fa-circle-check"></i> Working centralized authentication and communication/message management.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-tilt data-tags="EVE-NG GNS3 VPN Lab">
+            <div class="project__icon"><i class="fa-solid fa-diagram-project"></i></div>
+            <div class="project__body">
+              <div class="project__tophead">
+                <div class="project__tags"><span>EVE-NG</span><span>GNS3</span><span>VPN</span></div>
+                <span class="project__status project__status--done">Completed</span>
+              </div>
+              <h3 class="project__title">EVE-NG / GNS3 network lab</h3>
+              <p class="project__desc">GNS3/EVE-NG lab covering site-to-site VPN configuration, Cisco/Huawei devices, troubleshooting and enterprise network scenario validation.</p>
+              <button type="button" class="project__more">View details <i class="fa-solid fa-chevron-down"></i></button>
+              <div class="project__details">
+                <div class="project__arch">
+                  <span class="arch__node">Site A</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">VPN IPsec</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">Site B</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">Cloud</span>
+                </div>
+                <p class="project__result"><i class="fa-solid fa-circle-check"></i> Validated scenarios: OSPF, BGP, IPsec, inter-VLAN QoS.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-tilt data-tags="Linux DNS Mail Lab">
+            <div class="project__icon"><i class="fa-solid fa-server"></i></div>
+            <div class="project__body">
+              <div class="project__tophead">
+                <div class="project__tags"><span>Linux</span><span>DNS</span><span>Mail</span></div>
+                <span class="project__status project__status--done">Completed</span>
+              </div>
+              <h3 class="project__title">Linux server deployment</h3>
+              <p class="project__desc">Deployed and administered a Linux server (DNS, web, mail) in a virtualized environment.</p>
+              <button type="button" class="project__more">View details <i class="fa-solid fa-chevron-down"></i></button>
+              <div class="project__details">
+                <div class="project__metrics">
+                  <div class="metric"><span class="metric__val" data-count="3">0</span><span class="metric__label">deployed services</span></div>
+                  <div class="metric"><span class="metric__val" data-count="99" data-suffix="%">0%</span><span class="metric__label">availability</span></div>
+                  <div class="metric"><span class="metric__val" data-count="100" data-suffix="%">0%</span><span class="metric__label">hardened</span></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-tilt data-tags="Power-BI Excel Access Data">
+            <div class="project__icon"><i class="fa-solid fa-chart-pie"></i></div>
+            <div class="project__body">
+              <div class="project__tophead">
+                <div class="project__tags"><span>Power BI</span><span>Excel</span><span>Access</span></div>
+                <span class="project__status project__status--progress">Learning</span>
+              </div>
+              <h3 class="project__title">Data &amp; Business Intelligence — Power BI / Excel / Access</h3>
+              <p class="project__desc">Building data skills: advanced Excel formulas, Access databases, Power BI dashboards and AI-assisted analysis.</p>
+              <button type="button" class="project__more">View details <i class="fa-solid fa-chevron-down"></i></button>
+              <div class="project__details">
+                <ul class="project__points">
+                  <li><i class="fa-solid fa-check"></i> Building dashboards and visual reports in Power BI</li>
+                  <li><i class="fa-solid fa-check"></i> Data modeling and queries in Access, advanced Excel formulas</li>
+                  <li><i class="fa-solid fa-check"></i> Objective: strengthen data-driven QoS and network KPI management</li>
+                </ul>
+                <div class="project__arch">
+                  <span class="arch__node">Data</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">Analysis</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">Visualization</span><i class="fa-solid fa-arrow-right"></i>
+                  <span class="arch__node">Decision</span>
+                </div>
+                <p class="project__result"><i class="fa-solid fa-circle-check"></i> A complementary skill to my NOC/QoS practice, focused on reporting and decision support.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-tilt data-tags="HTML JavaScript MediaStream WebRTC Lab">
+            <div class="project__icon"><i class="fa-solid fa-video"></i></div>
+            <div class="project__body">
+              <div class="project__tophead">
+                <div class="project__tags"><span>HTML</span><span>JavaScript</span><span>MediaStream API</span></div>
+                <span class="project__status project__status--done">Completed</span>
+              </div>
+              <h3 class="project__title">Multimedia web application — browser audio/video capture</h3>
+              <p class="project__desc">Web application using browser multimedia APIs for webcam/microphone capture, recording and client-side audio/video processing.</p>
+              <button type="button" class="project__more">View details <i class="fa-solid fa-chevron-down"></i></button>
+              <div class="project__details">
+                <ul class="project__points">
+                  <li><i class="fa-solid fa-check"></i> Video/audio capture through browser APIs (MediaStream)</li>
+                  <li><i class="fa-solid fa-check"></i> Client-side recording and processing without a dedicated backend</li>
+                  <li><i class="fa-solid fa-check"></i> Project related to my Networks &amp; Multimedia studies at ESMT</li>
+                </ul>
+                <p class="project__result"><i class="fa-solid fa-circle-check"></i> Reusable foundation for real-time communication projects (WebRTC, video conferencing).</p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="projects__empty" id="projectsEmpty" hidden>No projects match this filter.</p>
+      <div class="class-labs"><h3>Class projects · ESMT</h3><p>Eight practical projects in network services, routing, cybersecurity, cloud and multimedia. Each project includes the architecture and screenshots from the shared class material.</p></div><div class="class-gallery"><details class="class-project"><summary><img class="class-cover" src="assets/projects/openfire-architecture.png" alt="Architecture — Openfire & OpenLDAP" loading="lazy" width="900" height="500"><div class="class-copy"><span class="class-label">Class lab</span><h3>Openfire & OpenLDAP</h3><p>XMPP messaging and centralized LDAP authentication on Ubuntu.</p><div class="class-tags"><span>Ubuntu</span><span>OpenLDAP</span><span>Openfire</span><span>XMPP</span><span>Gajim</span></div><span class="class-action">Details & screenshots</span></div></summary><div class="class-detail"><p>Network setup, OpenLDAP directory, user accounts, Openfire integration and Gajim messaging tests.</p><figure><a href="assets/projects/openfire-architecture.png" target="_blank" rel="noopener"><img src="assets/projects/openfire-architecture.png" alt="Openfire & OpenLDAP — screenshot 1" loading="lazy"></a><figcaption>Class material screenshot · 1 / 2</figcaption></figure><figure><a href="assets/projects/openfire-test-gajim.png" target="_blank" rel="noopener"><img src="assets/projects/openfire-test-gajim.png" alt="Openfire & OpenLDAP — screenshot 2" loading="lazy"></a><figcaption>Class material screenshot · 2 / 2</figcaption></figure></div></details><details class="class-project"><summary><img class="class-cover" src="assets/projects/dhcp-architecture.jpg" alt="Architecture — DHCP Server & DHCP Relay" loading="lazy" width="900" height="500"><div class="class-copy"><span class="class-label">Class lab</span><h3>DHCP Server & DHCP Relay</h3><p>Dynamic IPv4 address allocation across multiple subnets.</p><div class="class-tags"><span>Ubuntu</span><span>DHCP</span><span>IPv4</span><span>tcpdump</span></div><span class="class-action">Details & screenshots</span></div></summary><div class="class-detail"><p>DHCP server and relay configuration, lease allocation and network traffic analysis.</p><figure><a href="assets/projects/dhcp-architecture.jpg" target="_blank" rel="noopener"><img src="assets/projects/dhcp-architecture.jpg" alt="DHCP Server & DHCP Relay — screenshot 1" loading="lazy"></a><figcaption>Class material screenshot · 1 / 2</figcaption></figure><figure><a href="assets/projects/dhcp-validation.jpg" target="_blank" rel="noopener"><img src="assets/projects/dhcp-validation.jpg" alt="DHCP Server & DHCP Relay — screenshot 2" loading="lazy"></a><figcaption>Class material screenshot · 2 / 2</figcaption></figure></div></details><details class="class-project"><summary><img class="class-cover" src="assets/projects/mpls-architecture.png" alt="Architecture — Hub-and-Spoke MPLS VPN" loading="lazy" width="900" height="500"><div class="class-copy"><span class="class-label">Class lab</span><h3>Hub-and-Spoke MPLS VPN</h3><p>Connecting a headquarters and two branches with centralized Internet access.</p><div class="class-tags"><span>OSPF</span><span>MPLS</span><span>LDP</span><span>VRF</span><span>MP-BGP</span><span>NAT</span></div><span class="class-action">Details & screenshots</span></div></summary><div class="class-detail"><p>IP/MPLS backbone, L3 VPNs and VRFs, MP-BGP route propagation, branch isolation and NAT at headquarters.</p><figure><a href="assets/projects/mpls-architecture.png" target="_blank" rel="noopener"><img src="assets/projects/mpls-architecture.png" alt="Hub-and-Spoke MPLS VPN — screenshot 1" loading="lazy"></a><figcaption>Class material screenshot · 1 / 2</figcaption></figure><figure><a href="assets/projects/mpls-routing-table.png" target="_blank" rel="noopener"><img src="assets/projects/mpls-routing-table.png" alt="Hub-and-Spoke MPLS VPN — screenshot 2" loading="lazy"></a><figcaption>Class material screenshot · 2 / 2</figcaption></figure></div></details><details class="class-project"><summary><img class="class-cover" src="assets/projects/sip-architecture.png" alt="Architecture — SIP attack detection & response" loading="lazy" width="900" height="500"><div class="class-copy"><span class="class-label">Class lab</span><h3>SIP attack detection & response</h3><p>Lab-based SIP attack simulation and security alert correlation.</p><div class="class-tags"><span>Asterisk</span><span>SIPVicious</span><span>Wazuh</span><span>Fail2ban</span><span>Grafana</span></div><span class="class-action">Details & screenshots</span></div></summary><div class="class-detail"><p>Asterisk scanning and brute-force tests, Wazuh log collection, Fail2ban blocking and Grafana visualization.</p><figure><a href="assets/projects/sip-architecture.png" target="_blank" rel="noopener"><img src="assets/projects/sip-architecture.png" alt="SIP attack detection & response — screenshot 1" loading="lazy"></a><figcaption>Class material screenshot · 1 / 2</figcaption></figure><figure><a href="assets/projects/sip-wazuh-alert.png" target="_blank" rel="noopener"><img src="assets/projects/sip-wazuh-alert.png" alt="SIP attack detection & response — screenshot 2" loading="lazy"></a><figcaption>Class material screenshot · 2 / 2</figcaption></figure></div></details><details class="class-project"><summary><img class="class-cover" src="assets/projects/getvpn-lab.png" alt="Architecture — Inter-site security with GETVPN" loading="lazy" width="900" height="500"><div class="class-copy"><span class="class-label">Class lab</span><h3>Inter-site security with GETVPN</h3><p>Group encryption to secure a multi-site enterprise network.</p><div class="class-tags"><span>GETVPN</span><span>IPsec</span><span>ESP</span><span>GDOI</span><span>IKE</span><span>OSPF</span><span>Wireshark</span></div><span class="class-action">Details & screenshots</span></div></summary><div class="class-detail"><p>Key Server and Group Member configuration, GDOI key management and ESP traffic validation with Wireshark.</p><figure><a href="assets/projects/getvpn-lab.png" target="_blank" rel="noopener"><img src="assets/projects/getvpn-lab.png" alt="Inter-site security with GETVPN — screenshot 1" loading="lazy"></a><figcaption>Class material screenshot · 1 / 2</figcaption></figure><figure><a href="assets/projects/getvpn-wireshark.png" target="_blank" rel="noopener"><img src="assets/projects/getvpn-wireshark.png" alt="Inter-site security with GETVPN — screenshot 2" loading="lazy"></a><figcaption>Class material screenshot · 2 / 2</figcaption></figure></div></details><details class="class-project"><summary><img class="class-cover" src="assets/projects/aws-architecture.png" alt="Architecture — AWS — SmartSchool" loading="lazy" width="900" height="500"><div class="class-copy"><span class="class-label">Class lab</span><h3>AWS — SmartSchool</h3><p>Segmented web architecture with public EC2 and a private RDS database.</p><div class="class-tags"><span>AWS</span><span>VPC</span><span>EC2</span><span>RDS</span><span>S3</span><span>IAM</span></div><span class="class-action">Details & screenshots</span></div></summary><div class="class-detail"><p>VPC, public and private subnets, Internet Gateway, routing tables, Security Groups, EC2, RDS, S3 and IAM in AWS Academy.</p><figure><a href="assets/projects/aws-architecture.png" target="_blank" rel="noopener"><img src="assets/projects/aws-architecture.png" alt="AWS — SmartSchool — screenshot 1" loading="lazy"></a><figcaption>Class material screenshot · 1 / 2</figcaption></figure><figure><a href="assets/projects/aws-rds.png" target="_blank" rel="noopener"><img src="assets/projects/aws-rds.png" alt="AWS — SmartSchool — screenshot 2" loading="lazy"></a><figcaption>Class material screenshot · 2 / 2</figcaption></figure></div></details><details class="class-project"><summary><img class="class-cover" src="assets/projects/hls-cover.jpg" alt="Architecture — Adaptive HLS streaming" loading="lazy" width="900" height="500"><div class="class-copy"><span class="class-label">Class lab</span><h3>Adaptive HLS streaming</h3><p>Multi-bitrate encoding, HTTP delivery and video traffic analysis.</p><div class="class-tags"><span>Ubuntu</span><span>FFmpeg</span><span>H.264</span><span>HLS</span><span>HTTP</span><span>Wireshark</span></div><span class="class-action">Details & screenshots</span></div></summary><div class="class-detail"><p>FFmpeg encoding at 1080p, 720p, 480p and 240p, .m3u8 manifests, .ts segments, client playback and Wireshark analysis.</p><figure><a href="assets/projects/hls-cover.jpg" target="_blank" rel="noopener"><img src="assets/projects/hls-cover.jpg" alt="Adaptive HLS streaming — screenshot 1" loading="lazy"></a><figcaption>Class material screenshot · 1 / 3</figcaption></figure><figure><a href="assets/projects/hls-playback.png" target="_blank" rel="noopener"><img src="assets/projects/hls-playback.png" alt="Adaptive HLS streaming — screenshot 2" loading="lazy"></a><figcaption>Class material screenshot · 2 / 3</figcaption></figure><figure><a href="assets/projects/hls-wireshark.png" target="_blank" rel="noopener"><img src="assets/projects/hls-wireshark.png" alt="Adaptive HLS streaming — screenshot 3" loading="lazy"></a><figcaption>Class material screenshot · 3 / 3</figcaption></figure></div></details><details class="class-project"><summary><img class="class-cover" src="assets/projects/voip-toip-architecture.png" alt="Architecture — VoIP/ToIP, QoS & interoperability" loading="lazy" width="900" height="500"><div class="class-copy"><span class="class-label">Class lab</span><h3>VoIP/ToIP, QoS & interoperability</h3><p>Advanced Asterisk services, RTP measurements and Cisco interconnection.</p><div class="class-tags"><span>Asterisk</span><span>SIP</span><span>PJSIP</span><span>IAX</span><span>SCCP</span><span>RTP</span><span>QoS</span><span>Wireshark</span><span>Python</span><span>MySQL</span></div><span class="class-action">Details & screenshots</span></div></summary><div class="class-detail"><p>Video calls, Call Pickup, Hotline and CDR; jitter, latency, packet loss and codec analysis; Asterisk and Cisco UC560 interconnection.</p><figure><a href="assets/projects/voip-toip-architecture.png" target="_blank" rel="noopener"><img src="assets/projects/voip-toip-architecture.png" alt="VoIP/ToIP, QoS & interoperability — screenshot 1" loading="lazy"></a><figcaption>Class material screenshot · 1 / 3</figcaption></figure><figure><a href="assets/projects/voip-toip-cdr-web.png" target="_blank" rel="noopener"><img src="assets/projects/voip-toip-cdr-web.png" alt="VoIP/ToIP, QoS & interoperability — screenshot 2" loading="lazy"></a><figcaption>Class material screenshot · 2 / 3</figcaption></figure><figure><a href="assets/projects/voip-toip-call-result.jpg" target="_blank" rel="noopener"><img src="assets/projects/voip-toip-call-result.jpg" alt="VoIP/ToIP, QoS & interoperability — screenshot 3" loading="lazy"></a><figcaption>Class material screenshot · 3 / 3</figcaption></figure></div></details></div><p class="class-source">Shared class material and screenshots: <a href="https://mahutin20.github.io/" target="_blank" rel="noopener">mahutin20.github.io</a>.</p></div>
+    </section>
+
+    <!-- 08 ÉTUDES DE CAS -->
+    <section class="section section--alt" id="cas">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">08 · Case studies</span>
+          <h2 class="section__title">Technical challenges in detail</h2>
+          <p class="section__sub">Technical challenges, chosen solutions and measured impacts. Tap a card to expand the details.</p>
+        </div>
+        <div class="cases" id="casesList">
+          <article class="case case--collapsed reveal">
+            <div class="case__num">01</div>
+            <div class="case__body">
+              <button type="button" class="case__toggle">
+                <h3 class="case__title">Ensuring FTTH network quality</h3>
+                <i class="fa-solid fa-chevron-down case__chev"></i>
+              </button>
+              <div class="case__meta"><span class="chip"><i class="fa-solid fa-triangle-exclamation"></i> Problem</span><span class="chip chip--alt"><i class="fa-solid fa-wrench"></i> Solution</span><span class="chip chip--ok"><i class="fa-solid fa-chart-line"></i> Impact</span></div>
+              <div class="case__content">
+                <div class="case__problem"><h4>The problem</h4><p>Defects and non-compliance in FTTH networks could degrade fiber service quality and availability.</p></div>
+                <div class="case__solution"><h4>The solution</h4><ul>
+                  <li><i class="fa-solid fa-check"></i> Analyzed fiber quality KPIs to identify degradation trends.</li>
+                  <li><i class="fa-solid fa-check"></i> Assessed incidents, escalated to subcontractors and followed up through closure.</li>
+                  <li><i class="fa-solid fa-check"></i> Coordinated maintenance teams and infrastructure operators to meet SLAs.</li>
+                </ul></div>
+                <div class="case__impact"><h4>Measured impact</h4><p><i class="fa-solid fa-arrow-trend-down"></i> Network availability maintained above 98.5%; non-compliance rate reduced by 1.5% (relative) within the assigned scope.</p></div>
+              </div>
+            </div>
+          </article>
+          <article class="case case--collapsed reveal">
+            <div class="case__num">02</div>
+            <div class="case__body">
+              <button type="button" class="case__toggle">
+                <h3 class="case__title">Monitoring an Airtel mobile core network</h3>
+                <i class="fa-solid fa-chevron-down case__chev"></i>
+              </button>
+              <div class="case__meta"><span class="chip"><i class="fa-solid fa-triangle-exclamation"></i> Problem</span><span class="chip chip--alt"><i class="fa-solid fa-wrench"></i> Solution</span><span class="chip chip--ok"><i class="fa-solid fa-chart-line"></i> Impact</span></div>
+              <div class="case__content">
+                <div class="case__problem"><h4>The problem</h4><p>Limited visibility into core network KPIs (CSSR, CDR, latency) and delayed incident detection.</p></div>
+                <div class="case__solution"><h4>The solution</h4><ul>
+                  <li><i class="fa-solid fa-check"></i> Monitored core network KPIs (CSSR, CDR, throughput, latency).</li>
+                  <li><i class="fa-solid fa-check"></i> Built and automated weekly dashboards for QoS management.</li>
+                  <li><i class="fa-solid fa-check"></i> Prepared detailed reports for regulatory bodies (e.g. ARTP).</li>
+                </ul></div>
+                <div class="case__impact"><h4>Measured impact</h4><p><i class="fa-solid fa-circle-check"></i> Proactive anomaly detection, maintaining CSSR above 95%.</p></div>
+              </div>
+            </div>
+          </article>
+          <article class="case case--collapsed reveal">
+            <div class="case__num">03</div>
+            <div class="case__body">
+              <button type="button" class="case__toggle">
+                <h3 class="case__title">Deploying IP and LAN/WAN infrastructure</h3>
+                <i class="fa-solid fa-chevron-down case__chev"></i>
+              </button>
+              <div class="case__meta"><span class="chip"><i class="fa-solid fa-triangle-exclamation"></i> Problem</span><span class="chip chip--alt"><i class="fa-solid fa-wrench"></i> Solution</span><span class="chip chip--ok"><i class="fa-solid fa-chart-line"></i> Impact</span></div>
+              <div class="case__content">
+                <div class="case__problem"><h4>The problem</h4><p>Commissioned IP and LAN/WAN infrastructure for Airtel customers within SLA response times.</p></div>
+                <div class="case__solution"><h4>The solution</h4><ul>
+                  <li><i class="fa-solid fa-check"></i> Installed and configured Cisco/Huawei routers and switches to match target architectures.</li>
+                  <li><i class="fa-solid fa-check"></i> L1/L2 support: diagnosed and resolved connectivity incidents.</li>
+                  <li><i class="fa-solid fa-check"></i> Documented procedures and updated topologies.</li>
+                </ul></div>
+                <div class="case__impact"><h4>Measured impact</h4><p><i class="fa-solid fa-circle-check"></i> Delivered infrastructure within security standards and response times, with incident reports to prevent recurrence.</p></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 CHIFFRES CLÉS -->
+    <section class="section" id="stats">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">09 · Key figures</span>
+          <h2 class="section__title">Telecommunications activity</h2>
+        </div>
+        <div class="ghstats">
+          <div class="ghstat reveal"><span class="ghstat__val" data-count="3">0</span><span class="ghstat__label"><i class="fa-solid fa-building"></i> operator assignments</span></div>
+          <div class="ghstat reveal"><span class="ghstat__val" data-count="21">0</span><span class="ghstat__label"><i class="fa-solid fa-network-wired"></i> projects &amp; labs</span></div>
+          <div class="ghstat reveal"><span class="ghstat__val" data-count="10">0</span><span class="ghstat__label"><i class="fa-solid fa-code"></i> telecom technologies</span></div>
+          <div class="ghstat reveal"><span class="ghstat__val" data-count="98.5" data-suffix="%">0%</span><span class="ghstat__label"><i class="fa-solid fa-rocket"></i> fiber network availability maintained above this threshold</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 PARCOURS -->
+    <section class="section section--alt" id="parcours">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">10 · Background</span>
+          <h2 class="section__title">Certifications &amp; Education</h2>
+        </div>
+        <div class="two-col">
+          <div class="reveal">
+            <h3 class="sub-title"><i class="fa-solid fa-award"></i> Certifications</h3>
+            <div class="certs">
+              <div class="cert"><span class="cert__badge"><i class="fa-brands fa-aws"></i></span><div><p class="cert__name">AWS Cloud Foundations</p><p class="cert__org">AWS Academy · Badge earned</p></div></div>
+              <div class="cert"><span class="cert__badge"><i class="fa-solid fa-certificate"></i></span><div><p class="cert__name">CCNA</p><p class="cert__org">Cisco · In preparation</p></div></div>
+            </div>
+            <h3 class="sub-title sub-title--mt"><i class="fa-solid fa-language"></i> Languages</h3>
+            <div class="langs">
+              <div class="lang"><span><i class="fa-solid fa-flag"></i> French</span><div class="lang__bar"><span class="lang__fill" data-width="100"></span></div><span class="lang__level">Fluent · primary language</span></div>
+              <div class="lang"><span><i class="fa-solid fa-comment"></i> Zarma &amp; Hausa</span><div class="lang__bar"><span class="lang__fill" data-width="90"></span></div><span class="lang__level">Very good</span></div>
+              <div class="lang"><span><i class="fa-solid fa-globe"></i> English</span><div class="lang__bar"><span class="lang__fill" data-width="25"></span></div><span class="lang__level">Beginner</span></div>
+            </div>
+          </div>
+          <div class="reveal">
+            <h3 class="sub-title"><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+            <div class="certs">
+              <div class="cert"><span class="cert__badge"><i class="fa-solid fa-satellite-dish"></i></span><div><p class="cert__name">Master 2 in Telecommunications and Multimedia</p><p class="cert__org">ESMT Dakar · 2025 — 2026 (evening classes)<br>Thesis: Virtualized network function security and capacity planning in 5G networks (SDN/NFV)</p></div></div>
+              <div class="cert"><span class="cert__badge"><i class="fa-solid fa-satellite-dish"></i></span><div><p class="cert__name">Master 1 in Telecommunications and Multimedia</p><p class="cert__org">ESMT Dakar · 2024 — 2025</p></div></div>
+              <div class="cert"><span class="cert__badge"><i class="fa-solid fa-network-wired"></i></span><div><p class="cert__name">Bachelor’s degree in Computer Networks and Telecommunications</p><p class="cert__org">African Institute of Technology (I.A.T.) · 2022 — 2023</p></div></div>
+              <div class="cert"><span class="cert__badge"><i class="fa-solid fa-network-wired"></i></span><div><p class="cert__name">BTS in Computer Networks and Telecommunications</p><p class="cert__org">African Institute of Technology (I.A.T.) · 2020 — 2022</p></div></div>
+              <div class="cert"><span class="cert__badge"><i class="fa-solid fa-school"></i></span><div><p class="cert__name">General Baccalaureate · Science track D · Honors</p><p class="cert__org">CES Yantala, Niger · 2017 — 2020</p></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="interests reveal">
+          <h3 class="sub-title"><i class="fa-solid fa-heart"></i> Interests</h3>
+          <div class="interests__chips">
+            <span class="chip"><i class="fa-solid fa-network-wired"></i> Fiber networks</span>
+            <span class="chip"><i class="fa-solid fa-chart-line"></i> QoS &amp; monitoring</span>
+            <span class="chip"><i class="fa-solid fa-bolt"></i> Technology watch</span>
+            <span class="chip"><i class="fa-solid fa-tower-cell"></i> 4G / 5G</span>
+            <span class="chip"><i class="fa-solid fa-satellite-dish"></i> Operator architecture</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11 CONTACT -->
+    <section class="section section--contact" id="contact">
+      <div class="container">
+        <div class="contact reveal">
+          <span class="section__tag">11 · Contact</span>
+          <h2 class="contact__title">Let’s discuss your project</h2>
+          <p class="contact__desc">
+            Telecommunications &amp; Networks Engineer with ISP support experience at ALTEN, available to discuss opportunities in telecommunications, FTTH quality, QoS monitoring and 5G networks.
+          </p>
+          <div class="contact__links">
+            <a href="mailto:abdoul.ali.etu@esmt.sn" class="contact__link"><i class="fa-solid fa-envelope"></i><span>abdoul.ali.etu@esmt.sn</span><i class="fa-solid fa-copy contact__copy" data-copy="abdoul.ali.etu@esmt.sn"></i></a>
+            <a href="https://www.linkedin.com/in/daouda-aliabdoul-latifou-336469253" target="_blank" rel="noopener" class="contact__link"><i class="fa-brands fa-linkedin"></i><span>linkedin.com/in/daouda-aliabdoul-latifou-336469253</span></a>
+            <a href="https://wa.me/221787150911?text=Bonjour%20Abdoul%2C%20je%20vous%20contacte%20depuis%20votre%20portfolio." target="_blank" rel="noopener" class="contact__link contact__link--whatsapp"><i class="fa-brands fa-whatsapp"></i><span>Chat on WhatsApp</span></a>
+            <a href="tel:+221787150911" class="contact__link"><i class="fa-solid fa-phone"></i><span>+221 78 715 09 11</span><i class="fa-solid fa-copy contact__copy" data-copy="+221787150911"></i></a>
+            <a href="assets/CV_Daouda_Ali.pdf" download="CV-Daouda-Ali.pdf" class="contact__link"><i class="fa-solid fa-file-arrow-down"></i><span>Download my CV</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> DAOUDA ALI Abdoul Latifou</p>
+      <a href="#home" class="footer__top"><i class="fa-solid fa-arrow-up"></i> Back to top</a>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/221787150911?text=Bonjour%20Abdoul%2C%20je%20vous%20contacte%20depuis%20votre%20portfolio." target="_blank" rel="noopener" class="whatsapp-fab" aria-label="Contact me on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/main.en.js"></script>
+<script>
+document.querySelectorAll('.language-switch a').forEach(a=>a.addEventListener('click',()=>{a.href=a.getAttribute('href').split('#')[0]+location.hash;}));
+</script></body>
+</html>
